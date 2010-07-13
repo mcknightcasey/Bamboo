@@ -10,44 +10,24 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[      6461,        164]
-NotebookOptionsPosition[      6104,        147]
-NotebookOutlinePosition[      6442,        162]
-CellTagsIndexPosition[      6399,        159]
+NotebookDataLength[      6632,        161]
+NotebookOptionsPosition[      6311,        145]
+NotebookOutlinePosition[      6649,        160]
+CellTagsIndexPosition[      6606,        157]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
- RowBox[{
-  RowBox[{"\[Lambda]", " ", "=", " ", 
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8",
-      ",", "9", ",", "10"}], "}"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.4879034447904882`*^9, 3.4879034583546677`*^9}}],
 
 Cell[CellGroupData[{
-
 Cell[BoxData[{
  RowBox[{
   RowBox[{"MaxError", "=", " ", 
    RowBox[{"{", "0", "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   RowBox[{"MaxError", "[", 
-    RowBox[{"[", "1", "]"}], "]"}], " ", "=", " ", 
-   RowBox[{"N", "[", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"Max", "[", "\[Lambda]", "]"}], "-", 
-       RowBox[{"Min", "[", "\[Lambda]", "]"}]}], ")"}], "/", "2"}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+  RowBox[{"i", "=", "1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"i", "=", "2"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"While", "[", 
+  RowBox[{"While", "[", " ", 
    RowBox[{
     RowBox[{"Diff", " ", ">", " ", "0.1"}], ",", "\[IndentingNewLine]", 
     "\[IndentingNewLine]", 
@@ -66,7 +46,7 @@ Cell[BoxData[{
       RowBox[{
       "NotebookOpen", "[", 
        "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 2-Input \
-Section\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+Section.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"SelectionMove", "[", 
       RowBox[{"InputSection", ",", "All", ",", "Notebook"}], "]"}], ";", 
      "\[IndentingNewLine]", 
@@ -76,7 +56,7 @@ Section\>\"", "]"}]}], ";", "\[IndentingNewLine]",
       RowBox[{
       "NotebookOpen", "[", 
        "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 3-Meat \
-Part\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+Part.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"SelectionMove", "[", 
       RowBox[{"MeatPart", ",", "All", ",", "Notebook"}], "]"}], ";", 
      "\[IndentingNewLine]", 
@@ -86,31 +66,46 @@ Part\>\"", "]"}]}], ";", "\[IndentingNewLine]",
       RowBox[{
       "NotebookOpen", "[", 
        "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 4-Solution \
-and Recordings\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+and Recordings.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"SelectionMove", "[", 
       RowBox[{"SolutionRecordings", ",", "All", ",", "Notebook"}], "]"}], ";",
       "\[IndentingNewLine]", 
      RowBox[{"SelectionEvaluate", "[", "SolutionRecordings", "]"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"MaxError", " ", "=", " ", 
-      RowBox[{"Append", "[", 
-       RowBox[{"MaxError", ",", 
-        RowBox[{"N", "[", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"Max", "[", "\[Lambda]", "]"}], "-", 
-            RowBox[{"Min", "[", "\[Lambda]", "]"}]}], ")"}], "/", "2"}], 
-         "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"Diff", " ", "=", " ", 
-      RowBox[{
-       RowBox[{"MaxError", "[", 
-        RowBox[{"[", "i", "]"}], "]"}], " ", "-", " ", 
-       RowBox[{"MaxError", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", "-", "1"}], "]"}], "]"}]}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"i", "++"}]}]}], "\[IndentingNewLine]", "]"}], 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"i", "=", "1"}], ",", 
+        RowBox[{
+         RowBox[{"MaxError", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], " ", "=", " ", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Max", "[", "\[Lambda]", "]"}], "-", 
+             RowBox[{"Min", "[", "\[Lambda]", "]"}]}], ")"}], "/", "2"}], 
+          "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"MaxError", " ", "=", " ", 
+          RowBox[{"Append", "[", 
+           RowBox[{"MaxError", ",", 
+            RowBox[{"N", "[", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"Max", "[", "\[Lambda]", "]"}], "-", 
+                RowBox[{"Min", "[", "\[Lambda]", "]"}]}], ")"}], "/", "2"}], 
+             "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"Diff", " ", "=", " ", 
+          RowBox[{
+           RowBox[{"MaxError", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], " ", "-", " ", 
+           RowBox[{"MaxError", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", "-", "1"}], "]"}], "]"}]}]}], ";"}]}], 
+       "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+      RowBox[{"i", "++"}]}]}]}], "\[IndentingNewLine]", "]"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Print", "[", 
@@ -135,7 +130,10 @@ and Recordings\>\"", "]"}]}], ";", "\[IndentingNewLine]",
    3.4879050424870977`*^9, 3.487905075061247*^9}, {3.48790520274155*^9, 
    3.4879052140528584`*^9}, {3.4879057430465918`*^9, 
    3.4879059220092697`*^9}, {3.487906124862823*^9, 3.487906161388945*^9}, {
-   3.487906218125765*^9, 3.487906257627592*^9}}],
+   3.487906218125765*^9, 3.487906257627592*^9}, {3.4879874412877693`*^9, 
+   3.487987449348721*^9}, {3.4879874893434362`*^9, 3.48798748998013*^9}, {
+   3.487987716399275*^9, 3.487987747379407*^9}, {3.4879881332884893`*^9, 
+   3.487988135022522*^9}, {3.487988190599334*^9, 3.48798827053929*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -145,8 +143,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.487904113397051*^9, 3.487904130780367*^9}}]
 }, Open  ]]
 },
-WindowSize->{640, 579},
-WindowMargins->{{Automatic, 2}, {Automatic, 0}},
+WindowSize->{572, 679},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (February 18, 2009)",
 StyleDefinitions->"Default.nb"
 ]
@@ -161,10 +159,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[545, 20, 296, 7, 27, "Input"],
 Cell[CellGroupData[{
-Cell[866, 31, 4964, 106, 613, "Input"],
-Cell[5833, 139, 255, 5, 20, "Print"]
+Cell[567, 22, 5470, 113, 613, "Input"],
+Cell[6040, 137, 255, 5, 20, "Print"]
 }, Open  ]]
 }
 ]
