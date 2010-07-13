@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[      6632,        161]
-NotebookOptionsPosition[      6311,        145]
-NotebookOutlinePosition[      6649,        160]
-CellTagsIndexPosition[      6606,        157]
+NotebookDataLength[     11406,        257]
+NotebookOptionsPosition[     11082,        241]
+NotebookOutlinePosition[     11420,        256]
+CellTagsIndexPosition[     11377,        253]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,96 +22,177 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
+  RowBox[{"InitializationSection", " ", "=", " ", 
+   RowBox[{
+   "NotebookOpen", "[", 
+    "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run \
+1-Initialization Section.nb\>\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SelectionMove", "[", 
+   RowBox[{"InitializationSection", ",", "All", ",", "Notebook"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SelectionEvaluate", "[", "InitializationSection", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"InputSection", " ", "=", " ", 
+   RowBox[{
+   "NotebookOpen", "[", 
+    "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 2-Input \
+Section.nb\>\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SelectionMove", "[", 
+   RowBox[{"InputSection", ",", "All", ",", "Notebook"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SelectionEvaluate", "[", "InputSection", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"MaxError", "=", " ", 
    RowBox[{"{", "0", "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"i", "=", "1"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"While", "[", " ", 
+ RowBox[{"While", "[", " ", 
+  RowBox[{
+   RowBox[{"Diff", " ", ">", " ", "0.1"}], ",", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"Diff", " ", ">", " ", "0.1"}], ",", "\[IndentingNewLine]", 
-    "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"InitializationSection", " ", "=", " ", 
-      RowBox[{
-      "NotebookOpen", "[", 
-       "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run \
-1-Initialization Section.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"SelectionMove", "[", 
-      RowBox[{"InitializationSection", ",", "All", ",", "Notebook"}], "]"}], 
-     ";", "\[IndentingNewLine]", 
-     RowBox[{"SelectionEvaluate", "[", "InitializationSection", "]"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"InputSection", " ", "=", " ", 
-      RowBox[{
-      "NotebookOpen", "[", 
-       "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 2-Input \
-Section.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"SelectionMove", "[", 
-      RowBox[{"InputSection", ",", "All", ",", "Notebook"}], "]"}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"SelectionEvaluate", "[", "InputSection", "]"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"MeatPart", " ", "=", " ", 
-      RowBox[{
-      "NotebookOpen", "[", 
-       "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 3-Meat \
-Part.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"SelectionMove", "[", 
-      RowBox[{"MeatPart", ",", "All", ",", "Notebook"}], "]"}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"SelectionEvaluate", "[", "MeatPart", "]"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"SolutionRecordings", " ", "=", " ", 
-      RowBox[{
-      "NotebookOpen", "[", 
-       "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 4-Solution \
-and Recordings.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"SelectionMove", "[", 
-      RowBox[{"SolutionRecordings", ",", "All", ",", "Notebook"}], "]"}], ";",
-      "\[IndentingNewLine]", 
-     RowBox[{"SelectionEvaluate", "[", "SolutionRecordings", "]"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"MeatPart", " ", "=", " ", 
      RowBox[{
-      RowBox[{"If", "[", 
+     "NotebookOpen", "[", 
+      "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 3-Meat \
+Part.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"SelectionMove", "[", 
+     RowBox[{"MeatPart", ",", "All", ",", "Notebook"}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"SelectionEvaluate", "[", "MeatPart", "]"}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"SolutionRecordings", " ", "=", " ", 
+     RowBox[{
+     "NotebookOpen", "[", 
+      "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 4-Solution \
+and Recordings.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"SelectionMove", "[", 
+     RowBox[{"SolutionRecordings", ",", "All", ",", "Notebook"}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"SelectionEvaluate", "[", "SolutionRecordings", "]"}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"WeCan", " ", "=", " ", 
+     RowBox[{"CreateDocument", "[", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Sure", " ", "=", " ", 
+     RowBox[{"SelectionMove", "[", 
+      RowBox[{"InputSection", ",", "All", ",", "Notebook"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"FrontEndExecute", "[", 
+     RowBox[{"FrontEndToken", "[", 
+      RowBox[{"InputSection", ",", "\"\<Copy\>\""}], "]"}], "]"}], ";", 
+    RowBox[{"FrontEndExecute", "[", 
+     RowBox[{"FrontEndToken", "[", 
+      RowBox[{"WeCan", ",", "\"\<Paste\>\""}], "]"}], "]"}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+     "The", " ", "following", " ", "two", " ", "stanzas", " ", "writes", " ", 
+      "the", " ", "Solution", " ", "Matrix", " ", "and", " ", "the", " ", 
+      "Graph", " ", "into", " ", "an", " ", "output", " ", "file"}], "*)"}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+     "Not", " ", "sure", " ", "if", " ", "opening", " ", "this", " ", "same", 
+      " ", "file", " ", "OutputRec", " ", "every", " ", "time", " ", "will", 
+      " ", "work"}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"OutputRec", " ", "=", " ", 
+     RowBox[{"$TemporaryPrefix", " ", "<>", " ", "\"\<OutStuff\>\""}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Start", " ", "=", " ", 
+     RowBox[{"OpenWrite", "[", "OutputRec", "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Write", "[", 
+     RowBox[{"Start", ",", "plotmatrix"}], "]"}], ";", "\[IndentingNewLine]", 
+    
+    RowBox[{"Close", "[", "Start", "]"}], ";", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Start", " ", "=", " ", 
+     RowBox[{"OpenAppend", "[", "OutputRec", "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Write", "[", 
+     RowBox[{"Start", ",", "MagnificentPic"}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Close", "[", "Start", "]"}], ";", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+     "This", " ", "prints", " ", "the", " ", "contents", " ", "of", " ", 
+      "that", " ", "output", " ", "file", " ", "in", " ", "a", " ", 
+      "notebook", " ", "with", " ", "the", " ", "Input", " ", "Section"}], 
+     "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"NotebookWrite", "[", 
+     RowBox[{"WeCan", ",", "\"\<FilePrint[OutputRec]\>\"", ",", "All"}], 
+     "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"SelectionEvaluate", "[", "WeCan", "]"}], ";", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{
        RowBox[{
-        RowBox[{"i", "=", "1"}], ",", 
         RowBox[{
-         RowBox[{"MaxError", "[", 
-          RowBox[{"[", "1", "]"}], "]"}], " ", "=", " ", 
-         RowBox[{"N", "[", 
+         RowBox[{
+         "This", " ", "opens", " ", "the", " ", "Save", " ", "As", " ", 
+          "Window", " ", "to", " ", "save", " ", "the", " ", "Results", " ", 
+          "for", " ", "each", " ", "run"}], "..."}], "I", " ", 
+        RowBox[{"don", "'"}], "t", " ", "think", " ", "we", " ", "want", " ", 
+        "to", " ", "save", " ", "every", " ", "time", " ", "though", " ", 
+        "when", " ", "just", " ", "figuring", " ", "out", " ", "the", " ", 
+        "appropriate", " ", "step", " ", "size"}], "..."}], "except", " ", 
+      "for", " ", "the", " ", "presenation", " ", "we", " ", "do"}], "*)"}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"FrontEndExecute", "[", 
+      RowBox[{
+       RowBox[{"FrontEndToken", "[", 
+        RowBox[{"WeCan", ",", "\"\<SaveRename\>\""}], "]"}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"i", "==", "1"}], ",", 
           RowBox[{
-           RowBox[{"(", 
+           RowBox[{"MaxError", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], " ", "=", " ", 
+           RowBox[{"N", "[", 
             RowBox[{
-             RowBox[{"Max", "[", "\[Lambda]", "]"}], "-", 
-             RowBox[{"Min", "[", "\[Lambda]", "]"}]}], ")"}], "/", "2"}], 
-          "]"}]}], ",", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"MaxError", " ", "=", " ", 
-          RowBox[{"Append", "[", 
-           RowBox[{"MaxError", ",", 
-            RowBox[{"N", "[", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{"Max", "[", "\[Lambda]", "]"}], "-", 
-                RowBox[{"Min", "[", "\[Lambda]", "]"}]}], ")"}], "/", "2"}], 
-             "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-         RowBox[{"Diff", " ", "=", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Max", "[", "\[Lambda]", "]"}], "-", 
+               RowBox[{"Min", "[", "\[Lambda]", "]"}]}], ")"}], "/", "2"}], 
+            "]"}]}], ",", "\[IndentingNewLine]", 
           RowBox[{
-           RowBox[{"MaxError", "[", 
-            RowBox[{"[", "i", "]"}], "]"}], " ", "-", " ", 
-           RowBox[{"MaxError", "[", 
-            RowBox[{"[", 
-             RowBox[{"i", "-", "1"}], "]"}], "]"}]}]}], ";"}]}], 
-       "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
-      RowBox[{"i", "++"}]}]}]}], "\[IndentingNewLine]", "]"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Print", "[", 
-   RowBox[{"\"\<Appropriate step size is \>\"", ",", 
-    RowBox[{"N", "[", 
-     RowBox[{"i", "-", "1"}], "]"}]}], "]"}], ";"}]}], "Input",
+           RowBox[{"MaxError", " ", "=", " ", 
+            RowBox[{"Append", "[", 
+             RowBox[{"MaxError", ",", 
+              RowBox[{"N", "[", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Max", "[", "\[Lambda]", "]"}], "-", 
+                  RowBox[{"Min", "[", "\[Lambda]", "]"}]}], ")"}], "/", "2"}],
+                "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"Diff", " ", "=", " ", 
+            RowBox[{
+             RowBox[{"MaxError", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], " ", "-", " ", 
+             RowBox[{"MaxError", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", "-", "1"}], "]"}], "]"}]}]}], ";"}]}], 
+         "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+        RowBox[{"i", "++"}]}]}], "\[IndentingNewLine]", "]"}], 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<Appropriate step size is \>\"", ",", 
+       RowBox[{"N", "[", 
+        RowBox[{"i", "-", "1"}], "]"}]}], "]"}]}], ";"}]}]}]}], "Input",
  CellChangeTimes->{{3.48790168548398*^9, 3.487901690402372*^9}, {
    3.487901935399617*^9, 3.487902038683906*^9}, 3.48790206873168*^9, {
    3.487902141416305*^9, 3.487902184584696*^9}, {3.487902319957884*^9, 
@@ -133,7 +214,22 @@ and Recordings.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]",
    3.487906218125765*^9, 3.487906257627592*^9}, {3.4879874412877693`*^9, 
    3.487987449348721*^9}, {3.4879874893434362`*^9, 3.48798748998013*^9}, {
    3.487987716399275*^9, 3.487987747379407*^9}, {3.4879881332884893`*^9, 
-   3.487988135022522*^9}, {3.487988190599334*^9, 3.48798827053929*^9}}],
+   3.487988135022522*^9}, {3.487988190599334*^9, 3.48798827053929*^9}, {
+   3.48799034770998*^9, 3.487990347875436*^9}, {3.4879904636925907`*^9, 
+   3.487990468408093*^9}, {3.4879905615130377`*^9, 3.48799062442225*^9}, {
+   3.4879912943097982`*^9, 3.487991306043149*^9}, {3.487992661400655*^9, 
+   3.4879926974321547`*^9}, 3.487994641305883*^9, {3.487995352556802*^9, 
+   3.487995417026312*^9}, {3.487995483779015*^9, 3.4879955241194553`*^9}, {
+   3.487995555832196*^9, 3.487995611108343*^9}, {3.487995662108953*^9, 
+   3.4879956698993273`*^9}, {3.487996153240447*^9, 3.48799623918013*^9}, 
+   3.487996331515088*^9, 3.487997069927711*^9, {3.488031337859562*^9, 
+   3.4880313517719088`*^9}, {3.488031395018343*^9, 3.488031397178135*^9}, {
+   3.488032463743153*^9, 3.488032485693159*^9}, {3.488034861930139*^9, 
+   3.48803491828824*^9}, {3.4880352005905037`*^9, 3.488035229792283*^9}, {
+   3.4880358010908747`*^9, 3.488035911037939*^9}, {3.4880370024781218`*^9, 
+   3.488037116234264*^9}, {3.488037250341505*^9, 3.488037353868101*^9}, {
+   3.488037388114975*^9, 3.488037403819118*^9}, {3.488037438955455*^9, 
+   3.488037446256131*^9}, {3.488037477674584*^9, 3.488037544463338*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -160,8 +256,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[567, 22, 5470, 113, 613, "Input"],
-Cell[6040, 137, 255, 5, 20, "Print"]
+Cell[567, 22, 10241, 209, 1108, "Input"],
+Cell[10811, 233, 255, 5, 20, "Print"]
 }, Open  ]]
 }
 ]
