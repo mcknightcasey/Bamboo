@@ -1,0 +1,173 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      6461,        164]
+NotebookOptionsPosition[      6104,        147]
+NotebookOutlinePosition[      6442,        162]
+CellTagsIndexPosition[      6399,        159]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Lambda]", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8",
+      ",", "9", ",", "10"}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.4879034447904882`*^9, 3.4879034583546677`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"MaxError", "=", " ", 
+   RowBox[{"{", "0", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"MaxError", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], " ", "=", " ", 
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Max", "[", "\[Lambda]", "]"}], "-", 
+       RowBox[{"Min", "[", "\[Lambda]", "]"}]}], ")"}], "/", "2"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"Diff", " ", ">", " ", "0.1"}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"InitializationSection", " ", "=", " ", 
+      RowBox[{
+      "NotebookOpen", "[", 
+       "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run \
+1-Initialization Section.nb\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"SelectionMove", "[", 
+      RowBox[{"InitializationSection", ",", "All", ",", "Notebook"}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"SelectionEvaluate", "[", "InitializationSection", "]"}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"InputSection", " ", "=", " ", 
+      RowBox[{
+      "NotebookOpen", "[", 
+       "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 2-Input \
+Section\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"SelectionMove", "[", 
+      RowBox[{"InputSection", ",", "All", ",", "Notebook"}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SelectionEvaluate", "[", "InputSection", "]"}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"MeatPart", " ", "=", " ", 
+      RowBox[{
+      "NotebookOpen", "[", 
+       "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 3-Meat \
+Part\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"SelectionMove", "[", 
+      RowBox[{"MeatPart", ",", "All", ",", "Notebook"}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SelectionEvaluate", "[", "MeatPart", "]"}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"SolutionRecordings", " ", "=", " ", 
+      RowBox[{
+      "NotebookOpen", "[", 
+       "\"\</Users/cmcknight14/Documents/FEM Pittsburgh/Bamboo/Run 4-Solution \
+and Recordings\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"SelectionMove", "[", 
+      RowBox[{"SolutionRecordings", ",", "All", ",", "Notebook"}], "]"}], ";",
+      "\[IndentingNewLine]", 
+     RowBox[{"SelectionEvaluate", "[", "SolutionRecordings", "]"}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"MaxError", " ", "=", " ", 
+      RowBox[{"Append", "[", 
+       RowBox[{"MaxError", ",", 
+        RowBox[{"N", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Max", "[", "\[Lambda]", "]"}], "-", 
+            RowBox[{"Min", "[", "\[Lambda]", "]"}]}], ")"}], "/", "2"}], 
+         "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Diff", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"MaxError", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], " ", "-", " ", 
+       RowBox[{"MaxError", "[", 
+        RowBox[{"[", 
+         RowBox[{"i", "-", "1"}], "]"}], "]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"i", "++"}]}]}], "\[IndentingNewLine]", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Appropriate step size is \>\"", ",", 
+    RowBox[{"N", "[", 
+     RowBox[{"i", "-", "1"}], "]"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.48790168548398*^9, 3.487901690402372*^9}, {
+   3.487901935399617*^9, 3.487902038683906*^9}, 3.48790206873168*^9, {
+   3.487902141416305*^9, 3.487902184584696*^9}, {3.487902319957884*^9, 
+   3.487902432833253*^9}, {3.4879024691122627`*^9, 3.4879024894314537`*^9}, {
+   3.48790254318417*^9, 3.48790262814011*^9}, {3.487902699374845*^9, 
+   3.48790279019258*^9}, {3.487902852997684*^9, 3.487902867253004*^9}, {
+   3.48790299094099*^9, 3.487903009552787*^9}, {3.487903142373643*^9, 
+   3.4879031743322372`*^9}, {3.487903265193988*^9, 3.487903275793679*^9}, {
+   3.487903329944057*^9, 3.4879034274096537`*^9}, {3.487903504255806*^9, 
+   3.487903512964549*^9}, {3.487903553342001*^9, 3.4879035909655323`*^9}, {
+   3.4879036777878847`*^9, 3.487903716799243*^9}, {3.487903763703391*^9, 
+   3.487903801028623*^9}, {3.487903846779778*^9, 3.487903871651676*^9}, {
+   3.4879039190776854`*^9, 3.487903946785719*^9}, {3.4879039851881657`*^9, 
+   3.4879039975123453`*^9}, 3.4879040302496767`*^9, {3.487904072739386*^9, 
+   3.487904129799795*^9}, {3.48790497316229*^9, 3.487904995544676*^9}, {
+   3.4879050424870977`*^9, 3.487905075061247*^9}, {3.48790520274155*^9, 
+   3.4879052140528584`*^9}, {3.4879057430465918`*^9, 
+   3.4879059220092697`*^9}, {3.487906124862823*^9, 3.487906161388945*^9}, {
+   3.487906218125765*^9, 3.487906257627592*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Appropriate step size is \"\>", "\[InvisibleSpace]", "1.`"}],
+  SequenceForm["Appropriate step size is ", 1.],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.487904113397051*^9, 3.487904130780367*^9}}]
+}, Open  ]]
+},
+WindowSize->{640, 579},
+WindowMargins->{{Automatic, 2}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 296, 7, 27, "Input"],
+Cell[CellGroupData[{
+Cell[866, 31, 4964, 106, 613, "Input"],
+Cell[5833, 139, 255, 5, 20, "Print"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
