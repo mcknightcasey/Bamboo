@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[      3005,         98]
-NotebookOptionsPosition[      2609,         80]
-NotebookOutlinePosition[      2950,         95]
-CellTagsIndexPosition[      2907,         92]
+NotebookDataLength[      3100,         99]
+NotebookOptionsPosition[      2704,         81]
+NotebookOutlinePosition[      3045,         96]
+CellTagsIndexPosition[      3002,         93]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -69,13 +69,14 @@ Cell[BoxData[{
       SuperscriptBox["meshconstant", "2"]}], "]"}]}], "]"}], ";"}]}], "Input"],
 
 Cell[BoxData[
- RowBox[{"Show", "[", 
-  RowBox[{"ListPlot3D", "[", 
-   RowBox[{"plotmatrix", ",", 
-    RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], "]"}]], "Input",
+ RowBox[{"MagnificentPic", " ", "=", " ", 
+  RowBox[{"Show", "[", 
+   RowBox[{"ListPlot3D", "[", 
+    RowBox[{"plotmatrix", ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], "]"}]}]], "Input",
  CellChangeTimes->{{3.4833974997457557`*^9, 3.483397550714179*^9}, {
   3.48339758968268*^9, 3.483397640291731*^9}, {3.4834090468016877`*^9, 
-  3.483409049754794*^9}}]
+  3.483409049754794*^9}, {3.488160847944622*^9, 3.488160852940427*^9}}]
 }, Open  ]]
 },
 WindowSize->{640, 579},
@@ -98,7 +99,7 @@ Cell[CellGroupData[{
 Cell[567, 22, 27, 0, 67, "Section"],
 Cell[597, 24, 468, 9, 27, "Input"],
 Cell[1068, 35, 1187, 33, 123, "Input"],
-Cell[2258, 70, 335, 7, 27, "Input"]
+Cell[2258, 70, 430, 8, 27, "Input"]
 }, Open  ]]
 }
 ]
