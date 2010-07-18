@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[     12313,        285]
-NotebookOptionsPosition[     11880,        265]
-NotebookOutlinePosition[     12216,        280]
-CellTagsIndexPosition[     12173,        277]
+NotebookDataLength[     12448,        287]
+NotebookOptionsPosition[     12015,        267]
+NotebookOutlinePosition[     12351,        282]
+CellTagsIndexPosition[     12308,        279]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -155,8 +155,9 @@ Cell[BoxData[
                   RowBox[{"Node2", "\[Rule]", " ", "A"}]}], "}"}]}], "]"}]}], 
              "}"}]}], "]"}]}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"Share", "[", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
-   ";"}], "\[IndentingNewLine]"}]], "Input",
+      RowBox[{"Share", "[", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", "BullshitVector", "]"}], ";"}], 
+     "\[IndentingNewLine]", ")"}]}], ";"}], "\[IndentingNewLine]"}]], "Input",
  CellChangeTimes->{{3.4833081507552457`*^9, 3.483308331769712*^9}, {
    3.4833085473777075`*^9, 3.483308576893143*^9}, {3.4833090843430204`*^9, 
    3.483309102655403*^9}, {3.4833098988378077`*^9, 3.483309937665684*^9}, {
@@ -186,7 +187,8 @@ Cell[BoxData[
    3.483380544376363*^9}, {3.4833826635597267`*^9, 3.4833826769351544`*^9}, {
    3.483382946791552*^9, 3.483382948150901*^9}, {3.4833853787992105`*^9, 
    3.4833853920643263`*^9}, {3.4878249949017878`*^9, 3.487824997515284*^9}, {
-   3.488379320672551*^9, 3.488379368305269*^9}}]
+   3.488379320672551*^9, 3.488379368305269*^9}, {3.488385123415083*^9, 
+   3.488385130528554*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -264,7 +266,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{1440, 849},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
+WindowMargins->{{1, Automatic}, {0, Automatic}},
 FrontEndVersion->"7.0 for Linux x86 (32-bit) (February 25, 2009)",
 StyleDefinitions->"Default.nb"
 ]
@@ -281,11 +283,11 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[567, 22, 120, 1, 73, "Section"],
-Cell[690, 25, 8162, 163, 583, "Input"]
+Cell[690, 25, 8297, 165, 605, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8889, 193, 164, 2, 73, "Section"],
-Cell[9056, 197, 2808, 65, 319, "Input"]
+Cell[9024, 195, 164, 2, 73, "Section"],
+Cell[9191, 199, 2808, 65, 319, "Input"]
 }, Open  ]]
 }
 ]
