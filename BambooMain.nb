@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[    112421,       2702]
-NotebookOptionsPosition[    103780,       2464]
-NotebookOutlinePosition[    108519,       2587]
-CellTagsIndexPosition[    107852,       2569]
+NotebookDataLength[    103920,       2462]
+NotebookOptionsPosition[     95348,       2226]
+NotebookOutlinePosition[    100063,       2349]
+CellTagsIndexPosition[     99410,       2331]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -631,198 +631,10 @@ Cell[BoxData[{
   3.4883434463111963`*^9, 3.4883434554564466`*^9}},
  CellTags->"FOMesh_Generation"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{"FOMesh", " ", "//", " ", "MatrixForm"}]], "Input",
  CellChangeTimes->{{3.488773592876625*^9, 3.488773595536222*^9}, {
-  3.488773634899634*^9, 3.48877363804991*^9}}],
-
-Cell[BoxData[
- TagBox[
-  RowBox[{"(", "\[NoBreak]", GridBox[{
-     {
-      RowBox[{"(", "\[NoBreak]", 
-       TagBox[GridBox[{
-          {
-           FractionBox["1", "4"]},
-          {
-           FractionBox["1", "4"]}
-         },
-         GridBoxAlignment->{
-          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-         GridBoxSpacings->{"Columns" -> {
-             Offset[0.27999999999999997`], {
-              Offset[0.5599999999999999]}, 
-             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-             Offset[0.2], {
-              Offset[0.4]}, 
-             Offset[0.2]}, "RowsIndexed" -> {}}],
-        Column], "\[NoBreak]", ")"}], 
-      RowBox[{"(", "\[NoBreak]", 
-       TagBox[GridBox[{
-          {
-           FractionBox["1", "4"]},
-          {
-           FractionBox["1", "2"]}
-         },
-         GridBoxAlignment->{
-          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-         GridBoxSpacings->{"Columns" -> {
-             Offset[0.27999999999999997`], {
-              Offset[0.5599999999999999]}, 
-             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-             Offset[0.2], {
-              Offset[0.4]}, 
-             Offset[0.2]}, "RowsIndexed" -> {}}],
-        Column], "\[NoBreak]", ")"}], 
-      RowBox[{"(", "\[NoBreak]", 
-       TagBox[GridBox[{
-          {
-           FractionBox["1", "4"]},
-          {
-           FractionBox["3", "4"]}
-         },
-         GridBoxAlignment->{
-          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-         GridBoxSpacings->{"Columns" -> {
-             Offset[0.27999999999999997`], {
-              Offset[0.5599999999999999]}, 
-             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-             Offset[0.2], {
-              Offset[0.4]}, 
-             Offset[0.2]}, "RowsIndexed" -> {}}],
-        Column], "\[NoBreak]", ")"}]},
-     {
-      RowBox[{"(", "\[NoBreak]", 
-       TagBox[GridBox[{
-          {
-           FractionBox["1", "2"]},
-          {
-           FractionBox["1", "4"]}
-         },
-         GridBoxAlignment->{
-          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-         GridBoxSpacings->{"Columns" -> {
-             Offset[0.27999999999999997`], {
-              Offset[0.5599999999999999]}, 
-             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-             Offset[0.2], {
-              Offset[0.4]}, 
-             Offset[0.2]}, "RowsIndexed" -> {}}],
-        Column], "\[NoBreak]", ")"}], 
-      RowBox[{"(", "\[NoBreak]", 
-       TagBox[GridBox[{
-          {
-           FractionBox["1", "2"]},
-          {
-           FractionBox["1", "2"]}
-         },
-         GridBoxAlignment->{
-          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-         GridBoxSpacings->{"Columns" -> {
-             Offset[0.27999999999999997`], {
-              Offset[0.5599999999999999]}, 
-             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-             Offset[0.2], {
-              Offset[0.4]}, 
-             Offset[0.2]}, "RowsIndexed" -> {}}],
-        Column], "\[NoBreak]", ")"}], 
-      RowBox[{"(", "\[NoBreak]", 
-       TagBox[GridBox[{
-          {
-           FractionBox["1", "2"]},
-          {
-           FractionBox["3", "4"]}
-         },
-         GridBoxAlignment->{
-          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-         GridBoxSpacings->{"Columns" -> {
-             Offset[0.27999999999999997`], {
-              Offset[0.5599999999999999]}, 
-             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-             Offset[0.2], {
-              Offset[0.4]}, 
-             Offset[0.2]}, "RowsIndexed" -> {}}],
-        Column], "\[NoBreak]", ")"}]},
-     {
-      RowBox[{"(", "\[NoBreak]", 
-       TagBox[GridBox[{
-          {
-           FractionBox["3", "4"]},
-          {
-           FractionBox["1", "4"]}
-         },
-         GridBoxAlignment->{
-          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-         GridBoxSpacings->{"Columns" -> {
-             Offset[0.27999999999999997`], {
-              Offset[0.5599999999999999]}, 
-             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-             Offset[0.2], {
-              Offset[0.4]}, 
-             Offset[0.2]}, "RowsIndexed" -> {}}],
-        Column], "\[NoBreak]", ")"}], 
-      RowBox[{"(", "\[NoBreak]", 
-       TagBox[GridBox[{
-          {
-           FractionBox["3", "4"]},
-          {
-           FractionBox["1", "2"]}
-         },
-         GridBoxAlignment->{
-          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-         GridBoxSpacings->{"Columns" -> {
-             Offset[0.27999999999999997`], {
-              Offset[0.5599999999999999]}, 
-             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-             Offset[0.2], {
-              Offset[0.4]}, 
-             Offset[0.2]}, "RowsIndexed" -> {}}],
-        Column], "\[NoBreak]", ")"}], 
-      RowBox[{"(", "\[NoBreak]", 
-       TagBox[GridBox[{
-          {
-           FractionBox["3", "4"]},
-          {
-           FractionBox["3", "4"]}
-         },
-         GridBoxAlignment->{
-          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-         GridBoxSpacings->{"Columns" -> {
-             Offset[0.27999999999999997`], {
-              Offset[0.5599999999999999]}, 
-             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-             Offset[0.2], {
-              Offset[0.4]}, 
-             Offset[0.2]}, "RowsIndexed" -> {}}],
-        Column], "\[NoBreak]", ")"}]}
-    },
-    GridBoxAlignment->{
-     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-      "RowsIndexed" -> {}},
-    GridBoxSpacings->{"Columns" -> {
-        Offset[0.27999999999999997`], {
-         Offset[0.7]}, 
-        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-        Offset[0.2], {
-         Offset[0.4]}, 
-        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
-  Function[BoxForm`e$, 
-   MatrixForm[BoxForm`e$]]]], "Output",
- CellChangeTimes->{
-  3.4887735964243107`*^9, {3.4887736388345118`*^9, 3.488773648897072*^9}, 
-   3.488773686173873*^9}]
-}, Open  ]]
+  3.488773634899634*^9, 3.48877363804991*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2015,116 +1827,58 @@ Cell[BoxData[{
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"LoadIntegralFunction", "[", "lf_", "]"}], " ", ":=", 
+   RowBox[{"LoadIntegralPart", "[", "n_", "]"}], " ", ":=", " ", 
    RowBox[{"(", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Mod", "[", 
+         RowBox[{"n", ",", "2"}], "]"}], "\[Equal]", "1"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"LoadIntegral", "[", 
+          RowBox[{"[", "n", "]"}], "]"}], " ", "=", " ", 
+         RowBox[{
+          SubsuperscriptBox["\[Integral]", "0", "1"], 
+          RowBox[{
+           SubsuperscriptBox["\[Integral]", 
+            RowBox[{"BoundFunctions", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "j", ",", "n"}], "]"}], "]"}], "1"], 
+           RowBox[{"lf", "*", 
+            RowBox[{"PlateFunctions", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "j", ",", "n"}], "]"}], "]"}], 
+            RowBox[{"\[DifferentialD]", "y"}], 
+            RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], " ", ";"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"LoadIntegral", "[", 
+          RowBox[{"[", "n", "]"}], "]"}], " ", "=", " ", 
+         RowBox[{
+          SubsuperscriptBox["\[Integral]", "0", "1"], 
+          RowBox[{
+           SubsuperscriptBox["\[Integral]", "0", 
+            RowBox[{"BoundFunctions", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "j", ",", "n"}], "]"}], "]"}]], 
+           RowBox[{"lf", "*", 
+            RowBox[{"PlateFunctions", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "j", ",", "n"}], "]"}], "]"}], 
+            RowBox[{"\[DifferentialD]", "y"}], 
+            RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", 
       RowBox[{"LoadIntegral", "[", 
-       RowBox[{"[", "1", "]"}], "]"}], " ", "=", " ", 
-      RowBox[{
-       SubsuperscriptBox["\[Integral]", "0", "1"], 
-       RowBox[{
-        SubsuperscriptBox["\[Integral]", 
-         RowBox[{"BoundFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "1"}], "]"}], "]"}], "1"], 
-        RowBox[{"lf", "*", 
-         RowBox[{"PlateFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "1"}], "]"}], "]"}], 
-         RowBox[{"\[DifferentialD]", "y"}], 
-         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], " ", ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"LoadIntegral", "[", 
-       RowBox[{"[", "2", "]"}], "]"}], " ", "=", " ", 
-      RowBox[{
-       SubsuperscriptBox["\[Integral]", "0", "1"], 
-       RowBox[{
-        SubsuperscriptBox["\[Integral]", "0", 
-         RowBox[{"BoundFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "2"}], "]"}], "]"}]], 
-        RowBox[{"lf", "*", 
-         RowBox[{"PlateFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "2"}], "]"}], "]"}], 
-         RowBox[{"\[DifferentialD]", "y"}], 
-         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"LoadIntegral", " ", "[", 
-       RowBox[{"[", "3", "]"}], "]"}], "=", " ", 
-      RowBox[{
-       SubsuperscriptBox["\[Integral]", "0", "1"], 
-       RowBox[{
-        SubsuperscriptBox["\[Integral]", 
-         RowBox[{"BoundFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "3"}], "]"}], "]"}], "1"], 
-        RowBox[{"lf", "*", 
-         RowBox[{"PlateFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "3"}], "]"}], "]"}], 
-         RowBox[{"\[DifferentialD]", "y"}], 
-         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"LoadIntegral", "[", 
-       RowBox[{"[", "4", "]"}], "]"}], " ", "=", " ", 
-      RowBox[{
-       SubsuperscriptBox["\[Integral]", "0", "1"], 
-       RowBox[{
-        SubsuperscriptBox["\[Integral]", "0", 
-         RowBox[{"BoundFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "4"}], "]"}], "]"}]], 
-        RowBox[{"lf", "*", 
-         RowBox[{"PlateFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "4"}], "]"}], "]"}], 
-         RowBox[{"\[DifferentialD]", "y"}], 
-         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"LoadIntegral", "[", 
-       RowBox[{"[", "5", "]"}], "]"}], " ", "=", " ", 
-      RowBox[{
-       SubsuperscriptBox["\[Integral]", "0", "1"], 
-       RowBox[{
-        SubsuperscriptBox["\[Integral]", 
-         RowBox[{"BoundFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "5"}], "]"}], "]"}], "1"], 
-        RowBox[{"lf", "*", 
-         RowBox[{"PlateFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "5"}], "]"}], "]"}], 
-         RowBox[{"\[DifferentialD]", "y"}], 
-         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"LoadIntegral", "[", 
-       RowBox[{"[", "6", "]"}], "]"}], " ", "=", "  ", 
-      RowBox[{
-       SubsuperscriptBox["\[Integral]", "0", "1"], 
-       RowBox[{
-        SubsuperscriptBox["\[Integral]", "0", 
-         RowBox[{"BoundFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "6"}], "]"}], "]"}]], 
-        RowBox[{"lf", "*", 
-         RowBox[{"PlateFunctions", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "j", ",", "6"}], "]"}], "]"}], 
-         RowBox[{"\[DifferentialD]", "y"}], 
-         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"Return", "[", "LoadIntegral", "]"}], ";"}], 
-    "\[IndentingNewLine]", ")"}]}], ";"}], "\[IndentingNewLine]", 
+       RowBox[{"[", "n", "]"}], "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
+    ")"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"DistributeDefinitions", "[", 
-   RowBox[{"Zeros", ",", " ", "LoadIntegral", ",", "LoadIntegralFunction"}], 
+   RowBox[{"Zeros", ",", " ", "LoadIntegral", ",", "LoadIntegralPart"}], 
    "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.4831359659080124`*^9, 3.4831361049669523`*^9}, {
   3.483136158231214*^9, 3.483136220651491*^9}, {3.4831390088867064`*^9, 
@@ -2132,7 +1886,11 @@ Cell[BoxData[{
   3.483321090317426*^9, 3.4833210963955126`*^9}, {3.48838694468551*^9, 
   3.488386958882617*^9}, {3.488777037702846*^9, 3.488777102594749*^9}, {
   3.488777161350595*^9, 3.488777163655004*^9}, {3.488777626153*^9, 
-  3.488777635889193*^9}, {3.48877773183075*^9, 3.488777736486314*^9}},
+  3.488777635889193*^9}, {3.48877773183075*^9, 3.488777736486314*^9}, {
+  3.488778187164066*^9, 3.488778196528925*^9}, {3.488779041135043*^9, 
+  3.488779096168492*^9}, {3.488779127627131*^9, 3.488779231002356*^9}, {
+  3.488779313989329*^9, 3.488779323854366*^9}, {3.488779553504258*^9, 
+  3.488779569427677*^9}},
  CellTags->"Load_Integral_Definition"]
 }, Open  ]],
 
@@ -2161,9 +1919,6 @@ Cell[BoxData[{
        RowBox[{"(", 
         RowBox[{"UpperBound", " ", "-", " ", "LowerBound"}], ")"}], " ", "+", 
        " ", "1"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"IntermediaryIntegral", " ", "=", " ", 
-      RowBox[{"LoadIntegralFunction", " ", "[", "loadfun", "]"}]}], ";", 
-     "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"ComputeNthLoadIntegral", "[", "n_", "]"}], ":=", 
       RowBox[{"{", "\[IndentingNewLine]", 
@@ -2180,7 +1935,10 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"n", "-", "1"}], ",", "meshconstant"}], "]"}], "+", 
           "1"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"IntegralValue", " ", "=", "IntermediaryIntegral"}], ";", 
+        RowBox[{"IntegralValue", " ", "=", 
+         RowBox[{"LoadIntegral", "/.", 
+          RowBox[{"{", 
+           RowBox[{"lf", "\[Rule]", "loadfun"}], "}"}]}]}], ";", 
         "\[IndentingNewLine]", 
         RowBox[{"(*", 
          RowBox[{
@@ -2212,7 +1970,10 @@ Cell[BoxData[{
    3.488379450174908*^9}, {3.488380578878727*^9, 3.488380589390506*^9}, {
    3.488387005587485*^9, 3.488387010409295*^9}, {3.488777170912509*^9, 
    3.488777195719639*^9}, {3.488777429401677*^9, 3.4887774382075443`*^9}, {
-   3.488777642178712*^9, 3.48877765156985*^9}},
+   3.488777642178712*^9, 3.48877765156985*^9}, {3.488778208889602*^9, 
+   3.488778229574929*^9}, {3.488778592940573*^9, 3.488778594439101*^9}, {
+   3.488779260063382*^9, 3.488779262961784*^9}, {3.48877936212281*^9, 
+   3.488779374388145*^9}, {3.488779523394258*^9, 3.488779523778677*^9}},
  CellTags->"Client_Load_Vector_Actions"]
 }, Open  ]],
 
@@ -2293,11 +2054,10 @@ Cell[BoxData[
        RowBox[{"FullMessage", " ", "=", " ", 
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"LoadIntegral", "[", 
-           RowBox[{"[", "n", "]"}], "]"}], ",", "loadfunction", ",", " ", 
-          "BoundFunctions", ",", "PlateFunctions", ",", "LowerBound", ",", 
-          " ", "UpperBound", ",", " ", "meshconstant"}], "}"}]}], ";", 
-       "\[IndentingNewLine]", 
+          RowBox[{"LoadIntegralPart", "[", "n", "]"}], ",", "loadfunction", 
+          ",", " ", "BoundFunctions", ",", "PlateFunctions", ",", 
+          "LowerBound", ",", " ", "UpperBound", ",", " ", "meshconstant"}], 
+         "}"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"FullMessageList", " ", "=", " ", 
         RowBox[{"Append", "[", 
          RowBox[{"FullMessageList", ",", " ", "FullMessage"}], "]"}]}]}]}], 
@@ -2311,15 +2071,18 @@ Cell[BoxData[
       RowBox[{"Flatten", "[", "PreflightLoadVector", "]"}], " ", "+", " ", 
       "loadvector"}]}], ";"}]}], "\[IndentingNewLine]", "]"}]], "Input",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQA2IQHWRzYH3X55eOQXsWbgTTNqv2QmjzfSCa45yCUh+Q
+1:eJxTTMoPSmViYGAQB2IQHWRzYH3X55eOQXsWbgTTNqv2QmjzfSCa45yCUh+Q
 3ne6VhlEX1sgYAuizeZz2IHozOaTrSC6qsOkA0TLzZo7AUQHat6dDqKXBBxY
 D6YvOG+G0Pe3Q8Qv7ITQtmch4nVg+vO5qaX9QLrv/BowXfJ9XjWI7vqTUAOi
 r8voTZsMpLcuvTQDRLe9EzwJoks/rDsLoo/F5WbOBtIicU5ZIPpVVfkDEG1W
 sfExiLb6t5F3LpDW+7cPTIs01y8A0TkNKxaDaKuTpU9BNJPnDjAtfVD5PYi+
-4FADptu3fvgDonO38v8F0VcusJ3l/fLS8cAFSzD9ZnqHxKS/Lx2r9/7VANEA
-eBjXPg==
+4FADptu3fvgDonO38v8F0VcusJ3l/fLS8cAFSzD9ZnqHxKS/Lx2r9/7VANHt
+XHdqA/+9dFRbpVYHogEzQ9+P
   "],
- CellTags->"LoadVector_Evaluation"]
+ CellTags->"LoadVector_Evaluation"],
+
+Cell[BoxData["PreflightLoadVector"], "Input",
+ CellChangeTimes->{{3.48877872992118*^9, 3.488778757502731*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2331,12 +2094,11 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"\[Lambda]", "=", 
    RowBox[{"LinearSolve", "[", 
-    RowBox[{"StiffnessMatrix", ",", "loadvector", ",", " ", 
-     RowBox[{"Method", " ", "\[Rule]", " ", "\"\<Multifrontal\>\""}]}], 
-    "]"}]}], ";"}]], "Input",
+    RowBox[{"StiffnessMatrix", ",", "loadvector"}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.4834049023233786`*^9, 3.4834049078702183`*^9}, {
-  3.4834049498543243`*^9, 3.483404953260553*^9}, {3.483412220864729*^9, 
-  3.4834122300052958`*^9}, {3.483412380379333*^9, 3.4834123896917734`*^9}},
+   3.4834049498543243`*^9, 3.483404953260553*^9}, {3.483412220864729*^9, 
+   3.4834122300052958`*^9}, {3.483412380379333*^9, 3.4834123896917734`*^9}, 
+   3.48877864831243*^9},
  CellTags->"Solution"],
 
 Cell[BoxData[{
@@ -2463,8 +2225,8 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{1280, 681},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (February 18, 2009)",
+WindowMargins->{{1, Automatic}, {Automatic, 51}},
+FrontEndVersion->"7.0 for Linux x86 (32-bit) (February 25, 2009)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -2473,235 +2235,233 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "PDE_Parameters"->{
-  Cell[567, 22, 128, 2, 67, "Section",
+  Cell[567, 22, 128, 2, 73, "Section",
    CellTags->"PDE_Parameters"],
-  Cell[698, 26, 4608, 79, 148, "Input",
+  Cell[698, 26, 4608, 79, 209, "Input",
    CellTags->"PDE_Parameters"]},
  "Worker_Initialization"->{
-  Cell[12540, 286, 256, 4, 67, "Section",
+  Cell[12540, 286, 256, 4, 73, "Section",
    CellTags->"Worker_Initialization"],
-  Cell[12799, 292, 1143, 24, 73, "Input",
+  Cell[12799, 292, 1143, 24, 99, "Input",
    CellTags->"Worker_Initialization"]},
  "Mesh_Parameters"->{
-  Cell[13979, 321, 160, 3, 67, "Section",
+  Cell[13979, 321, 160, 3, 73, "Section",
    CellTags->"Mesh_Parameters"],
-  Cell[14142, 326, 3458, 51, 64, "Input",
+  Cell[14142, 326, 3458, 51, 78, "Input",
    CellTags->"Mesh_Parameters"]},
  "FOMesh_Generation"->{
-  Cell[17637, 382, 68, 1, 67, "Section",
+  Cell[17637, 382, 68, 1, 73, "Section",
    CellTags->"FOMesh_Generation"],
-  Cell[17708, 385, 198, 3, 27, "Input",
+  Cell[17708, 385, 198, 3, 32, "Input",
    CellTags->"FOMesh_Generation"],
-  Cell[17909, 390, 8139, 218, 508, "Input",
+  Cell[17909, 390, 8139, 218, 737, "Input",
    CellTags->"FOMesh_Generation"],
-  Cell[26051, 610, 784, 21, 64, "Input",
+  Cell[26051, 610, 784, 21, 78, "Input",
    CellTags->"FOMesh_Generation"]},
  "PlateFunction_And_Gradient_Generation"->{
-  Cell[33787, 829, 106, 1, 67, "Section",
+  Cell[27063, 641, 106, 1, 73, "Section",
    CellTags->"PlateFunction_And_Gradient_Generation"],
-  Cell[33896, 832, 1387, 39, 109, "Input",
+  Cell[27172, 644, 1387, 39, 144, "Input",
    CellTags->"PlateFunction_And_Gradient_Generation"],
-  Cell[35286, 873, 476, 13, 43, "Input",
+  Cell[28562, 685, 476, 13, 55, "Input",
    CellTags->"PlateFunction_And_Gradient_Generation"],
-  Cell[35765, 888, 1275, 36, 109, "Input",
+  Cell[29041, 700, 1275, 36, 144, "Input",
    CellTags->"PlateFunction_And_Gradient_Generation"]},
  "LoadVector_Generation"->{
-  Cell[37077, 929, 144, 2, 67, "Section",
+  Cell[30353, 741, 144, 2, 73, "Section",
    CellTags->"LoadVector_Generation"],
-  Cell[37224, 933, 4828, 130, 448, "Input",
+  Cell[30500, 745, 4828, 130, 649, "Input",
    CellTags->"LoadVector_Generation"],
-  Cell[42055, 1065, 1480, 39, 103, "Input",
+  Cell[35331, 877, 1480, 39, 143, "Input",
    CellTags->"LoadVector_Generation"]},
  "Stiffness_Matrix_Generation"->{
-  Cell[43572, 1109, 209, 3, 67, "Section",
+  Cell[36848, 921, 209, 3, 73, "Section",
    CellTags->"Stiffness_Matrix_Generation"],
-  Cell[43784, 1114, 27250, 576, 1636, "Input",
+  Cell[37060, 926, 27250, 576, 1988, "Input",
    CellTags->"Stiffness_Matrix_Generation"]},
  "Client_Stiffness_Matrix_Actions"->{
-  Cell[71071, 1695, 166, 2, 67, "Section",
+  Cell[64347, 1507, 166, 2, 73, "Section",
    CellTags->"Client_Stiffness_Matrix_Actions"],
-  Cell[71240, 1699, 6876, 131, 418, "Input",
+  Cell[64516, 1511, 6876, 131, 605, "Input",
    CellTags->"Client_Stiffness_Matrix_Actions"]},
  "Laplacian_Operator_Stiffness_Matrix_Evaluation"->{
-  Cell[78153, 1835, 208, 2, 67, "Section",
+  Cell[71429, 1647, 208, 2, 73, "Section",
    CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-  Cell[78364, 1839, 1686, 38, 64, "Input",
+  Cell[71640, 1651, 1686, 38, 77, "Input",
    CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-  Cell[80053, 1879, 1934, 47, 138, "Input",
+  Cell[73329, 1691, 1934, 47, 165, "Input",
    CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-  Cell[81990, 1928, 391, 8, 27, "Input",
+  Cell[75266, 1740, 391, 8, 32, "Input",
    CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-  Cell[82384, 1938, 2738, 57, 118, "Input",
+  Cell[75660, 1750, 2738, 57, 165, "Input",
    CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"]},
  "Load_Integral_Definition"->{
-  Cell[85159, 2000, 149, 2, 67, "Section",
+  Cell[78435, 1812, 149, 2, 73, "Section",
    CellTags->"Load_Integral_Definition"],
-  Cell[85311, 2004, 5184, 131, 404, "Input",
+  Cell[78587, 1816, 3248, 77, 331, "Input",
    CellTags->"Load_Integral_Definition"]},
  "Client_Load_Vector_Actions"->{
-  Cell[90532, 2140, 205, 3, 67, "Section",
+  Cell[81872, 1898, 205, 3, 73, "Section",
    CellTags->"Client_Load_Vector_Actions"],
-  Cell[90740, 2145, 3173, 70, 253, "Input",
+  Cell[82080, 1903, 3357, 73, 341, "Input",
    CellTags->"Client_Load_Vector_Actions"]},
  "LoadVector_Evaluation"->{
-  Cell[93950, 2220, 87, 1, 67, "Section",
+  Cell[85474, 1981, 87, 1, 73, "Section",
    CellTags->"LoadVector_Evaluation"],
-  Cell[94040, 2223, 1282, 32, 64, "Input",
+  Cell[85564, 1984, 1282, 32, 77, "Input",
    CellTags->"LoadVector_Evaluation"],
-  Cell[95325, 2257, 2774, 64, 193, "Input",
+  Cell[86849, 2018, 2764, 63, 231, "Input",
    CellTags->"LoadVector_Evaluation"]},
  "Solution"->{
-  Cell[98136, 2326, 50, 1, 67, "Section",
+  Cell[89763, 2089, 50, 1, 73, "Section",
    CellTags->"Solution"],
-  Cell[98189, 2329, 491, 10, 27, "Input",
+  Cell[89816, 2092, 432, 9, 32, "Input",
    CellTags->"Solution"],
-  Cell[98683, 2341, 1988, 49, 123, "Input",
+  Cell[90251, 2103, 1988, 49, 165, "Input",
    CellTags->"Solution"],
-  Cell[100674, 2392, 1244, 26, 58, "Input",
+  Cell[92242, 2154, 1244, 26, 77, "Input",
    CellTags->"Solution"]},
  "Date_Time_CPUTimeUsed"->{
-  Cell[101955, 2423, 181, 3, 67, "Section",
+  Cell[93523, 2185, 181, 3, 73, "Section",
    CellTags->"Date_Time_CPUTimeUsed"],
-  Cell[102139, 2428, 1625, 33, 148, "Input",
+  Cell[93707, 2190, 1625, 33, 209, "Input",
    CellTags->"Date_Time_CPUTimeUsed"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PDE_Parameters", 104075, 2474},
- {"Worker_Initialization", 104247, 2479},
- {"Mesh_Parameters", 104432, 2484},
- {"FOMesh_Generation", 104607, 2489},
- {"PlateFunction_And_Gradient_Generation", 104958, 2498},
- {"LoadVector_Generation", 105376, 2507},
- {"Stiffness_Matrix_Generation", 105658, 2514},
- {"Client_Stiffness_Matrix_Actions", 105877, 2519},
- {"Laplacian_Operator_Stiffness_Matrix_Evaluation", 106117, 2524},
- {"Load_Integral_Definition", 106684, 2535},
- {"Client_Load_Vector_Actions", 106890, 2540},
- {"LoadVector_Evaluation", 107094, 2545},
- {"Solution", 107356, 2552},
- {"Date_Time_CPUTimeUsed", 107661, 2561}
+ {"PDE_Parameters", 95641, 2236},
+ {"Worker_Initialization", 95813, 2241},
+ {"Mesh_Parameters", 95998, 2246},
+ {"FOMesh_Generation", 96173, 2251},
+ {"PlateFunction_And_Gradient_Generation", 96524, 2260},
+ {"LoadVector_Generation", 96942, 2269},
+ {"Stiffness_Matrix_Generation", 97223, 2276},
+ {"Client_Stiffness_Matrix_Actions", 97440, 2281},
+ {"Laplacian_Operator_Stiffness_Matrix_Evaluation", 97680, 2286},
+ {"Load_Integral_Definition", 98247, 2297},
+ {"Client_Load_Vector_Actions", 98452, 2302},
+ {"LoadVector_Evaluation", 98656, 2307},
+ {"Solution", 98918, 2314},
+ {"Date_Time_CPUTimeUsed", 99221, 2323}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[567, 22, 128, 2, 67, "Section",
+Cell[567, 22, 128, 2, 73, "Section",
  CellTags->"PDE_Parameters"],
-Cell[698, 26, 4608, 79, 148, "Input",
+Cell[698, 26, 4608, 79, 209, "Input",
  CellTags->"PDE_Parameters"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5343, 110, 144, 2, 67, "Section"],
-Cell[5490, 114, 678, 14, 27, "Input"],
-Cell[6171, 130, 2016, 45, 238, "Input"],
-Cell[8190, 177, 1471, 30, 118, "Input"],
-Cell[9664, 209, 2667, 66, 238, "Input"],
-Cell[12334, 277, 169, 4, 27, "Input"]
+Cell[5343, 110, 144, 2, 73, "Section"],
+Cell[5490, 114, 678, 14, 32, "Input"],
+Cell[6171, 130, 2016, 45, 341, "Input"],
+Cell[8190, 177, 1471, 30, 165, "Input"],
+Cell[9664, 209, 2667, 66, 341, "Input"],
+Cell[12334, 277, 169, 4, 32, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12540, 286, 256, 4, 67, "Section",
+Cell[12540, 286, 256, 4, 73, "Section",
  CellTags->"Worker_Initialization"],
-Cell[12799, 292, 1143, 24, 73, "Input",
+Cell[12799, 292, 1143, 24, 99, "Input",
  CellTags->"Worker_Initialization"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13979, 321, 160, 3, 67, "Section",
+Cell[13979, 321, 160, 3, 73, "Section",
  CellTags->"Mesh_Parameters"],
-Cell[14142, 326, 3458, 51, 64, "Input",
+Cell[14142, 326, 3458, 51, 78, "Input",
  CellTags->"Mesh_Parameters"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17637, 382, 68, 1, 67, "Section",
+Cell[17637, 382, 68, 1, 73, "Section",
  CellTags->"FOMesh_Generation"],
-Cell[17708, 385, 198, 3, 27, "Input",
+Cell[17708, 385, 198, 3, 32, "Input",
  CellTags->"FOMesh_Generation"],
-Cell[17909, 390, 8139, 218, 508, "Input",
+Cell[17909, 390, 8139, 218, 737, "Input",
  CellTags->"FOMesh_Generation"],
-Cell[26051, 610, 784, 21, 64, "Input",
+Cell[26051, 610, 784, 21, 78, "Input",
  CellTags->"FOMesh_Generation"],
-Cell[CellGroupData[{
-Cell[26860, 635, 188, 3, 27, "Input"],
-Cell[27051, 640, 6687, 183, 165, "Output"]
-}, Open  ]]
+Cell[26838, 633, 188, 3, 32, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33787, 829, 106, 1, 67, "Section",
+Cell[27063, 641, 106, 1, 73, "Section",
  CellTags->"PlateFunction_And_Gradient_Generation"],
-Cell[33896, 832, 1387, 39, 109, "Input",
+Cell[27172, 644, 1387, 39, 144, "Input",
  CellTags->"PlateFunction_And_Gradient_Generation"],
-Cell[35286, 873, 476, 13, 43, "Input",
+Cell[28562, 685, 476, 13, 55, "Input",
  CellTags->"PlateFunction_And_Gradient_Generation"],
-Cell[35765, 888, 1275, 36, 109, "Input",
+Cell[29041, 700, 1275, 36, 144, "Input",
  CellTags->"PlateFunction_And_Gradient_Generation"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37077, 929, 144, 2, 67, "Section",
+Cell[30353, 741, 144, 2, 73, "Section",
  CellTags->"LoadVector_Generation"],
-Cell[37224, 933, 4828, 130, 448, "Input",
+Cell[30500, 745, 4828, 130, 649, "Input",
  CellTags->"LoadVector_Generation"],
-Cell[42055, 1065, 1480, 39, 103, "Input",
+Cell[35331, 877, 1480, 39, 143, "Input",
  CellTags->"LoadVector_Generation"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[43572, 1109, 209, 3, 67, "Section",
+Cell[36848, 921, 209, 3, 73, "Section",
  CellTags->"Stiffness_Matrix_Generation"],
-Cell[43784, 1114, 27250, 576, 1636, "Input",
+Cell[37060, 926, 27250, 576, 1988, "Input",
  CellTags->"Stiffness_Matrix_Generation"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[71071, 1695, 166, 2, 67, "Section",
+Cell[64347, 1507, 166, 2, 73, "Section",
  CellTags->"Client_Stiffness_Matrix_Actions"],
-Cell[71240, 1699, 6876, 131, 418, "Input",
+Cell[64516, 1511, 6876, 131, 605, "Input",
  CellTags->"Client_Stiffness_Matrix_Actions"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[78153, 1835, 208, 2, 67, "Section",
+Cell[71429, 1647, 208, 2, 73, "Section",
  CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-Cell[78364, 1839, 1686, 38, 64, "Input",
+Cell[71640, 1651, 1686, 38, 77, "Input",
  CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-Cell[80053, 1879, 1934, 47, 138, "Input",
+Cell[73329, 1691, 1934, 47, 165, "Input",
  CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-Cell[81990, 1928, 391, 8, 27, "Input",
+Cell[75266, 1740, 391, 8, 32, "Input",
  CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-Cell[82384, 1938, 2738, 57, 118, "Input",
+Cell[75660, 1750, 2738, 57, 165, "Input",
  CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[85159, 2000, 149, 2, 67, "Section",
+Cell[78435, 1812, 149, 2, 73, "Section",
  CellTags->"Load_Integral_Definition"],
-Cell[85311, 2004, 5184, 131, 404, "Input",
+Cell[78587, 1816, 3248, 77, 331, "Input",
  CellTags->"Load_Integral_Definition"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[90532, 2140, 205, 3, 67, "Section",
+Cell[81872, 1898, 205, 3, 73, "Section",
  CellTags->"Client_Load_Vector_Actions"],
-Cell[90740, 2145, 3173, 70, 253, "Input",
+Cell[82080, 1903, 3357, 73, 341, "Input",
  CellTags->"Client_Load_Vector_Actions"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[93950, 2220, 87, 1, 67, "Section",
+Cell[85474, 1981, 87, 1, 73, "Section",
  CellTags->"LoadVector_Evaluation"],
-Cell[94040, 2223, 1282, 32, 64, "Input",
+Cell[85564, 1984, 1282, 32, 77, "Input",
  CellTags->"LoadVector_Evaluation"],
-Cell[95325, 2257, 2774, 64, 193, "Input",
- CellTags->"LoadVector_Evaluation"]
+Cell[86849, 2018, 2764, 63, 231, "Input",
+ CellTags->"LoadVector_Evaluation"],
+Cell[89616, 2083, 110, 1, 32, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[98136, 2326, 50, 1, 67, "Section",
+Cell[89763, 2089, 50, 1, 73, "Section",
  CellTags->"Solution"],
-Cell[98189, 2329, 491, 10, 27, "Input",
+Cell[89816, 2092, 432, 9, 32, "Input",
  CellTags->"Solution"],
-Cell[98683, 2341, 1988, 49, 123, "Input",
+Cell[90251, 2103, 1988, 49, 165, "Input",
  CellTags->"Solution"],
-Cell[100674, 2392, 1244, 26, 58, "Input",
+Cell[92242, 2154, 1244, 26, 77, "Input",
  CellTags->"Solution"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[101955, 2423, 181, 3, 67, "Section",
+Cell[93523, 2185, 181, 3, 73, "Section",
  CellTags->"Date_Time_CPUTimeUsed"],
-Cell[102139, 2428, 1625, 33, 148, "Input",
+Cell[93707, 2190, 1625, 33, 209, "Input",
  CellTags->"Date_Time_CPUTimeUsed"]
 }, Open  ]]
 }
