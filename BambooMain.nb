@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[    111943,       2703]
-NotebookOptionsPosition[    103302,       2465]
-NotebookOutlinePosition[    108041,       2588]
-CellTagsIndexPosition[    107374,       2570]
+NotebookDataLength[    112421,       2702]
+NotebookOptionsPosition[    103780,       2464]
+NotebookOutlinePosition[    108519,       2587]
+CellTagsIndexPosition[    107852,       2569]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2008,131 +2008,131 @@ Cell[BoxData[{
    RowBox[{"Zeros", "[", "x_", "]"}], " ", ":=", " ", "0"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"LoadIntegral", " ", "=", " ", 
-   RowBox[{"Array", "[", 
-    RowBox[{"Zeros", ",", "6"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"LoadIntegral", " ", "=", " ", 
+    RowBox[{"Array", "[", 
+     RowBox[{"Zeros", ",", "6"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"LoadIntegral", "[", 
-    RowBox[{"[", "1", "]"}], "]"}], " ", "=", " ", 
-   RowBox[{"HoldForm", "[", 
+   RowBox[{"LoadIntegralFunction", "[", "lf_", "]"}], " ", ":=", 
+   RowBox[{"(", "\[IndentingNewLine]", 
     RowBox[{
-     SubsuperscriptBox["\[Integral]", "0", "1"], 
      RowBox[{
-      SubsuperscriptBox["\[Integral]", 
-       RowBox[{"BoundFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "1"}], "]"}], "]"}], "1"], 
-      RowBox[{"lf", "*", 
-       RowBox[{"PlateFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "1"}], "]"}], "]"}], 
-       RowBox[{"\[DifferentialD]", "y"}], 
-       RowBox[{"\[DifferentialD]", "x"}]}]}]}], " ", "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"LoadIntegral", "[", 
-    RowBox[{"[", "2", "]"}], "]"}], " ", "=", 
-   RowBox[{"HoldForm", "[", " ", 
-    RowBox[{
-     SubsuperscriptBox["\[Integral]", "0", "1"], 
+      RowBox[{"LoadIntegral", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], " ", "=", " ", 
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", "1"], 
+       RowBox[{
+        SubsuperscriptBox["\[Integral]", 
+         RowBox[{"BoundFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "1"}], "]"}], "]"}], "1"], 
+        RowBox[{"lf", "*", 
+         RowBox[{"PlateFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "1"}], "]"}], "]"}], 
+         RowBox[{"\[DifferentialD]", "y"}], 
+         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], " ", ";", 
+     "\[IndentingNewLine]", 
      RowBox[{
-      SubsuperscriptBox["\[Integral]", "0", 
-       RowBox[{"BoundFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "2"}], "]"}], "]"}]], 
-      RowBox[{"lf", "*", 
-       RowBox[{"PlateFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "2"}], "]"}], "]"}], 
-       RowBox[{"\[DifferentialD]", "y"}], 
-       RowBox[{"\[DifferentialD]", "x"}]}]}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"LoadIntegral", " ", "[", 
-    RowBox[{"[", "3", "]"}], "]"}], "=", " ", 
-   RowBox[{"HoldForm", "[", " ", 
-    RowBox[{
-     SubsuperscriptBox["\[Integral]", "0", "1"], 
+      RowBox[{"LoadIntegral", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], " ", "=", " ", 
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", "1"], 
+       RowBox[{
+        SubsuperscriptBox["\[Integral]", "0", 
+         RowBox[{"BoundFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "2"}], "]"}], "]"}]], 
+        RowBox[{"lf", "*", 
+         RowBox[{"PlateFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "2"}], "]"}], "]"}], 
+         RowBox[{"\[DifferentialD]", "y"}], 
+         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";", 
+     "\[IndentingNewLine]", 
      RowBox[{
-      SubsuperscriptBox["\[Integral]", 
-       RowBox[{"BoundFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "3"}], "]"}], "]"}], "1"], 
-      RowBox[{"lf", "*", 
-       RowBox[{"PlateFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "3"}], "]"}], "]"}], 
-       RowBox[{"\[DifferentialD]", "y"}], 
-       RowBox[{"\[DifferentialD]", "x"}]}]}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"LoadIntegral", "[", 
-    RowBox[{"[", "4", "]"}], "]"}], " ", "=", " ", 
-   RowBox[{"HoldForm", "[", " ", 
-    RowBox[{
-     SubsuperscriptBox["\[Integral]", "0", "1"], 
+      RowBox[{"LoadIntegral", " ", "[", 
+       RowBox[{"[", "3", "]"}], "]"}], "=", " ", 
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", "1"], 
+       RowBox[{
+        SubsuperscriptBox["\[Integral]", 
+         RowBox[{"BoundFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "3"}], "]"}], "]"}], "1"], 
+        RowBox[{"lf", "*", 
+         RowBox[{"PlateFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "3"}], "]"}], "]"}], 
+         RowBox[{"\[DifferentialD]", "y"}], 
+         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";", 
+     "\[IndentingNewLine]", 
      RowBox[{
-      SubsuperscriptBox["\[Integral]", "0", 
-       RowBox[{"BoundFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "4"}], "]"}], "]"}]], 
-      RowBox[{"lf", "*", 
-       RowBox[{"PlateFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "4"}], "]"}], "]"}], 
-       RowBox[{"\[DifferentialD]", "y"}], 
-       RowBox[{"\[DifferentialD]", "x"}]}]}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"LoadIntegral", "[", 
-    RowBox[{"[", "5", "]"}], "]"}], " ", "=", " ", 
-   RowBox[{"HoldForm", "[", " ", 
-    RowBox[{
-     SubsuperscriptBox["\[Integral]", "0", "1"], 
+      RowBox[{"LoadIntegral", "[", 
+       RowBox[{"[", "4", "]"}], "]"}], " ", "=", " ", 
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", "1"], 
+       RowBox[{
+        SubsuperscriptBox["\[Integral]", "0", 
+         RowBox[{"BoundFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "4"}], "]"}], "]"}]], 
+        RowBox[{"lf", "*", 
+         RowBox[{"PlateFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "4"}], "]"}], "]"}], 
+         RowBox[{"\[DifferentialD]", "y"}], 
+         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";", 
+     "\[IndentingNewLine]", 
      RowBox[{
-      SubsuperscriptBox["\[Integral]", 
-       RowBox[{"BoundFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "5"}], "]"}], "]"}], "1"], 
-      RowBox[{"lf", "*", 
-       RowBox[{"PlateFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "5"}], "]"}], "]"}], 
-       RowBox[{"\[DifferentialD]", "y"}], 
-       RowBox[{"\[DifferentialD]", "x"}]}]}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"LoadIntegral", "[", 
-    RowBox[{"[", "6", "]"}], "]"}], " ", "=", " ", 
-   RowBox[{"HoldForm", "[", " ", 
-    RowBox[{
-     SubsuperscriptBox["\[Integral]", "0", "1"], 
+      RowBox[{"LoadIntegral", "[", 
+       RowBox[{"[", "5", "]"}], "]"}], " ", "=", " ", 
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", "1"], 
+       RowBox[{
+        SubsuperscriptBox["\[Integral]", 
+         RowBox[{"BoundFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "5"}], "]"}], "]"}], "1"], 
+        RowBox[{"lf", "*", 
+         RowBox[{"PlateFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "5"}], "]"}], "]"}], 
+         RowBox[{"\[DifferentialD]", "y"}], 
+         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";", 
+     "\[IndentingNewLine]", 
      RowBox[{
-      SubsuperscriptBox["\[Integral]", "0", 
-       RowBox[{"BoundFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "6"}], "]"}], "]"}]], 
-      RowBox[{"lf", "*", 
-       RowBox[{"PlateFunctions", "[", 
-        RowBox[{"[", 
-         RowBox[{"i", ",", "j", ",", "6"}], "]"}], "]"}], 
-       RowBox[{"\[DifferentialD]", "y"}], 
-       RowBox[{"\[DifferentialD]", "x"}]}]}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+      RowBox[{"LoadIntegral", "[", 
+       RowBox[{"[", "6", "]"}], "]"}], " ", "=", "  ", 
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", "1"], 
+       RowBox[{
+        SubsuperscriptBox["\[Integral]", "0", 
+         RowBox[{"BoundFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "6"}], "]"}], "]"}]], 
+        RowBox[{"lf", "*", 
+         RowBox[{"PlateFunctions", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j", ",", "6"}], "]"}], "]"}], 
+         RowBox[{"\[DifferentialD]", "y"}], 
+         RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "LoadIntegral", "]"}], ";"}], 
+    "\[IndentingNewLine]", ")"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"DistributeDefinitions", "[", 
-   RowBox[{"Zeros", ",", " ", "LoadIntegral"}], "]"}], ";"}]}], "Input",
+   RowBox[{"Zeros", ",", " ", "LoadIntegral", ",", "LoadIntegralFunction"}], 
+   "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.4831359659080124`*^9, 3.4831361049669523`*^9}, {
   3.483136158231214*^9, 3.483136220651491*^9}, {3.4831390088867064`*^9, 
   3.4831390243414135`*^9}, {3.483298706709381*^9, 3.4832987076781864`*^9}, {
   3.483321090317426*^9, 3.4833210963955126`*^9}, {3.48838694468551*^9, 
-  3.488386958882617*^9}},
+  3.488386958882617*^9}, {3.488777037702846*^9, 3.488777102594749*^9}, {
+  3.488777161350595*^9, 3.488777163655004*^9}, {3.488777626153*^9, 
+  3.488777635889193*^9}, {3.48877773183075*^9, 3.488777736486314*^9}},
  CellTags->"Load_Integral_Definition"]
 }, Open  ]],
 
@@ -2162,9 +2162,7 @@ Cell[BoxData[{
         RowBox[{"UpperBound", " ", "-", " ", "LowerBound"}], ")"}], " ", "+", 
        " ", "1"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"IntermediaryIntegral", " ", "=", " ", 
-      RowBox[{"LoadIntegral", " ", "/.", " ", 
-       RowBox[{"{", 
-        RowBox[{"lf", " ", "\[Rule]", " ", "loadfun"}], "}"}]}]}], ";", 
+      RowBox[{"LoadIntegralFunction", " ", "[", "loadfun", "]"}]}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"ComputeNthLoadIntegral", "[", "n_", "]"}], ":=", 
@@ -2182,8 +2180,7 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"n", "-", "1"}], ",", "meshconstant"}], "]"}], "+", 
           "1"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"IntegralValue", " ", "=", " ", 
-         RowBox[{"ReleaseHold", "[", "IntermediaryIntegral", "]"}]}], ";", 
+        RowBox[{"IntegralValue", " ", "=", "IntermediaryIntegral"}], ";", 
         "\[IndentingNewLine]", 
         RowBox[{"(*", 
          RowBox[{
@@ -2213,7 +2210,9 @@ Cell[BoxData[{
    3.4833118819659276`*^9}, {3.4833206360547085`*^9, 3.483320639679685*^9}, {
    3.483320728350993*^9, 3.483320731460348*^9}, {3.4883794286352882`*^9, 
    3.488379450174908*^9}, {3.488380578878727*^9, 3.488380589390506*^9}, {
-   3.488387005587485*^9, 3.488387010409295*^9}},
+   3.488387005587485*^9, 3.488387010409295*^9}, {3.488777170912509*^9, 
+   3.488777195719639*^9}, {3.488777429401677*^9, 3.4887774382075443`*^9}, {
+   3.488777642178712*^9, 3.48877765156985*^9}},
  CellTags->"Client_Load_Vector_Actions"]
 }, Open  ]],
 
@@ -2537,52 +2536,52 @@ CellTagsIndex->{
  "Load_Integral_Definition"->{
   Cell[85159, 2000, 149, 2, 67, "Section",
    CellTags->"Load_Integral_Definition"],
-  Cell[85311, 2004, 4736, 131, 293, "Input",
+  Cell[85311, 2004, 5184, 131, 404, "Input",
    CellTags->"Load_Integral_Definition"]},
  "Client_Load_Vector_Actions"->{
-  Cell[90084, 2140, 205, 3, 67, "Section",
+  Cell[90532, 2140, 205, 3, 67, "Section",
    CellTags->"Client_Load_Vector_Actions"],
-  Cell[90292, 2145, 3143, 71, 253, "Input",
+  Cell[90740, 2145, 3173, 70, 253, "Input",
    CellTags->"Client_Load_Vector_Actions"]},
  "LoadVector_Evaluation"->{
-  Cell[93472, 2221, 87, 1, 67, "Section",
+  Cell[93950, 2220, 87, 1, 67, "Section",
    CellTags->"LoadVector_Evaluation"],
-  Cell[93562, 2224, 1282, 32, 64, "Input",
+  Cell[94040, 2223, 1282, 32, 64, "Input",
    CellTags->"LoadVector_Evaluation"],
-  Cell[94847, 2258, 2774, 64, 193, "Input",
+  Cell[95325, 2257, 2774, 64, 193, "Input",
    CellTags->"LoadVector_Evaluation"]},
  "Solution"->{
-  Cell[97658, 2327, 50, 1, 67, "Section",
+  Cell[98136, 2326, 50, 1, 67, "Section",
    CellTags->"Solution"],
-  Cell[97711, 2330, 491, 10, 27, "Input",
+  Cell[98189, 2329, 491, 10, 27, "Input",
    CellTags->"Solution"],
-  Cell[98205, 2342, 1988, 49, 123, "Input",
+  Cell[98683, 2341, 1988, 49, 123, "Input",
    CellTags->"Solution"],
-  Cell[100196, 2393, 1244, 26, 58, "Input",
+  Cell[100674, 2392, 1244, 26, 58, "Input",
    CellTags->"Solution"]},
  "Date_Time_CPUTimeUsed"->{
-  Cell[101477, 2424, 181, 3, 67, "Section",
+  Cell[101955, 2423, 181, 3, 67, "Section",
    CellTags->"Date_Time_CPUTimeUsed"],
-  Cell[101661, 2429, 1625, 33, 148, "Input",
+  Cell[102139, 2428, 1625, 33, 148, "Input",
    CellTags->"Date_Time_CPUTimeUsed"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PDE_Parameters", 103597, 2475},
- {"Worker_Initialization", 103769, 2480},
- {"Mesh_Parameters", 103954, 2485},
- {"FOMesh_Generation", 104129, 2490},
- {"PlateFunction_And_Gradient_Generation", 104480, 2499},
- {"LoadVector_Generation", 104898, 2508},
- {"Stiffness_Matrix_Generation", 105180, 2515},
- {"Client_Stiffness_Matrix_Actions", 105399, 2520},
- {"Laplacian_Operator_Stiffness_Matrix_Evaluation", 105639, 2525},
- {"Load_Integral_Definition", 106206, 2536},
- {"Client_Load_Vector_Actions", 106412, 2541},
- {"LoadVector_Evaluation", 106616, 2546},
- {"Solution", 106878, 2553},
- {"Date_Time_CPUTimeUsed", 107183, 2562}
+ {"PDE_Parameters", 104075, 2474},
+ {"Worker_Initialization", 104247, 2479},
+ {"Mesh_Parameters", 104432, 2484},
+ {"FOMesh_Generation", 104607, 2489},
+ {"PlateFunction_And_Gradient_Generation", 104958, 2498},
+ {"LoadVector_Generation", 105376, 2507},
+ {"Stiffness_Matrix_Generation", 105658, 2514},
+ {"Client_Stiffness_Matrix_Actions", 105877, 2519},
+ {"Laplacian_Operator_Stiffness_Matrix_Evaluation", 106117, 2524},
+ {"Load_Integral_Definition", 106684, 2535},
+ {"Client_Load_Vector_Actions", 106890, 2540},
+ {"LoadVector_Evaluation", 107094, 2545},
+ {"Solution", 107356, 2552},
+ {"Date_Time_CPUTimeUsed", 107661, 2561}
  }
 *)
 (*NotebookFileOutline
@@ -2672,37 +2671,37 @@ Cell[82384, 1938, 2738, 57, 118, "Input",
 Cell[CellGroupData[{
 Cell[85159, 2000, 149, 2, 67, "Section",
  CellTags->"Load_Integral_Definition"],
-Cell[85311, 2004, 4736, 131, 293, "Input",
+Cell[85311, 2004, 5184, 131, 404, "Input",
  CellTags->"Load_Integral_Definition"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[90084, 2140, 205, 3, 67, "Section",
+Cell[90532, 2140, 205, 3, 67, "Section",
  CellTags->"Client_Load_Vector_Actions"],
-Cell[90292, 2145, 3143, 71, 253, "Input",
+Cell[90740, 2145, 3173, 70, 253, "Input",
  CellTags->"Client_Load_Vector_Actions"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[93472, 2221, 87, 1, 67, "Section",
+Cell[93950, 2220, 87, 1, 67, "Section",
  CellTags->"LoadVector_Evaluation"],
-Cell[93562, 2224, 1282, 32, 64, "Input",
+Cell[94040, 2223, 1282, 32, 64, "Input",
  CellTags->"LoadVector_Evaluation"],
-Cell[94847, 2258, 2774, 64, 193, "Input",
+Cell[95325, 2257, 2774, 64, 193, "Input",
  CellTags->"LoadVector_Evaluation"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[97658, 2327, 50, 1, 67, "Section",
+Cell[98136, 2326, 50, 1, 67, "Section",
  CellTags->"Solution"],
-Cell[97711, 2330, 491, 10, 27, "Input",
+Cell[98189, 2329, 491, 10, 27, "Input",
  CellTags->"Solution"],
-Cell[98205, 2342, 1988, 49, 123, "Input",
+Cell[98683, 2341, 1988, 49, 123, "Input",
  CellTags->"Solution"],
-Cell[100196, 2393, 1244, 26, 58, "Input",
+Cell[100674, 2392, 1244, 26, 58, "Input",
  CellTags->"Solution"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[101477, 2424, 181, 3, 67, "Section",
+Cell[101955, 2423, 181, 3, 67, "Section",
  CellTags->"Date_Time_CPUTimeUsed"],
-Cell[101661, 2429, 1625, 33, 148, "Input",
+Cell[102139, 2428, 1625, 33, 148, "Input",
  CellTags->"Date_Time_CPUTimeUsed"]
 }, Open  ]]
 }
