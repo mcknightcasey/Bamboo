@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[    124403,       2823]
-NotebookOptionsPosition[    115206,       2574]
-NotebookOutlinePosition[    120351,       2706]
-CellTagsIndexPosition[    119684,       2688]
+NotebookDataLength[    121575,       2751]
+NotebookOptionsPosition[    112536,       2507]
+NotebookOutlinePosition[    117680,       2639]
+CellTagsIndexPosition[    117013,       2621]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -114,79 +114,6 @@ Cell[BoxData[{
    3.488997914200514*^9}, {3.489005787469736*^9, 3.489005788186531*^9}, {
    3.489007436467065*^9, 3.489007453556876*^9}},
  CellTags->"PDE_Parameters"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Error Loop", "Section",
- CellChangeTimes->{{3.488343154301013*^9, 3.488343231549675*^9}, {
-  3.488494143292215*^9, 3.488494148422672*^9}}],
-
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{
-   RowBox[{
-    RowBox[{"BambooEvaluateCell", "[", "CellTag_", "]"}], ":=", " ", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{"NotebookLocate", "[", "CellTag", "]"}], ";", " ", 
-      RowBox[{"SelectionEvaluate", "[", 
-       RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]}], ")"}]}], ";"}], 
-  "*)"}]], "Input",
- CellChangeTimes->{{3.488491729984219*^9, 3.488491750885005*^9}, {
-  3.488492166098412*^9, 3.488492183189303*^9}, {3.488492265616111*^9, 
-  3.488492291075527*^9}, {3.488492440798277*^9, 3.488492460921802*^9}, {
-  3.488492671975091*^9, 3.488492682864014*^9}, {3.488492715744102*^9, 
-  3.488492721629159*^9}, {3.488494296971541*^9, 3.488494338414636*^9}, {
-  3.48886058092925*^9, 3.488860592584532*^9}}],
-
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{
-   RowBox[{
-    RowBox[{"BambooSolveForStepSize", "[", "stepsize_", "]"}], " ", ":=", " ", 
-    RowBox[{"(", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"h", " ", "=", " ", "stepsize"}], ";", "\[IndentingNewLine]", 
-      RowBox[{"DistributeDefinitions", "[", "h", "]"}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"BambooEvaluateCell", "[", "\"\<Mesh_Parameters\>\"", "]"}], 
-      ";", "\[IndentingNewLine]", 
-      RowBox[{"BambooEvaluateCell", "[", "\"\<FOMesh_Generation\>\"", "]"}], 
-      ";", "\[IndentingNewLine]", 
-      RowBox[{
-      "BambooEvaluateCell", "[", 
-       "\"\<PlateFunction_And_Gradient_Generation\>\"", "]"}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{
-      "BambooEvaluateCell", "[", "\"\<LoadVector_Generation\>\"", "]"}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{
-      "BambooEvaluateCell", "[", "\"\<Stiffness_Matrix_Generation\>\"", "]"}],
-       ";", "\[IndentingNewLine]", 
-      RowBox[{
-      "BambooEvaluateCell", "[", "\"\<Client_Stiffness_Matrix_Actions\>\"", 
-       "]"}], ";", "\[IndentingNewLine]", 
-      RowBox[{
-      "BambooEvaluateCell", "[", 
-       "\"\<Laplacian_Operator_Stiffness_Matrix_Evaluation\>\"", "]"}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{
-      "BambooEvaluateCell", "[", "\"\<Load_Integral_Definition\>\"", "]"}], 
-      ";", "\[IndentingNewLine]", 
-      RowBox[{
-      "BambooEvaluateCell", "[", "\"\<Client_Load_Vector_Actions\>\"", "]"}], 
-      ";", "\[IndentingNewLine]", 
-      RowBox[{
-      "BambooEvaluateCell", "[", "\"\<LoadVector_Evaluation\>\"", "]"}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"BambooEvaluateCell", "[", "\"\<Solution\>\"", "]"}], ";"}], 
-     "\[IndentingNewLine]", ")"}]}], ";"}], "*)"}]], "Input",
- CellChangeTimes->{{3.488494594180251*^9, 3.488494724206972*^9}, {
-   3.488494791998082*^9, 3.488495008941374*^9}, {3.488495097124374*^9, 
-   3.488495104870094*^9}, {3.488497252986433*^9, 3.488497295781987*^9}, 
-   3.488680286270937*^9, {3.488680390331511*^9, 3.488680403078509*^9}, {
-   3.488860584667042*^9, 3.488860595985223*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -593,16 +520,17 @@ Cell[BoxData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{
-   RowBox[{"Robertisanass", "[", "p_", "]"}], ":=", 
+   RowBox[{"DoGradient", "[", "p_", "]"}], ":=", 
    RowBox[{"Grad", "[", 
     RowBox[{"p", ",", 
      RowBox[{"Cartesian", "[", 
       RowBox[{"x", ",", "y", ",", "z"}], "]"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"DistributeDefinitions", "[", "Robertisanass", "]"}], 
-  ";"}]}], "Input",
- CellChangeTimes->{{3.488343495162272*^9, 3.4883435050686083`*^9}},
+  RowBox[{"DistributeDefinitions", "[", "DoGradient", "]"}], ";"}]}], "Input",\
+
+ CellChangeTimes->{{3.488343495162272*^9, 3.4883435050686083`*^9}, {
+  3.490050240759634*^9, 3.490050248659412*^9}},
  CellTags->"PlateFunction_And_Gradient_Generation"],
 
 Cell[BoxData[{
@@ -631,7 +559,7 @@ Cell[BoxData[{
        RowBox[{"[", 
         RowBox[{"i", ",", "j"}], "]"}], "]"}], "=", 
       RowBox[{"Map", "[", 
-       RowBox[{"Robertisanass", ",", 
+       RowBox[{"DoGradient", ",", 
         RowBox[{"PlateFunctions", "[", 
          RowBox[{"[", 
           RowBox[{"i", ",", "j"}], "]"}], "]"}]}], "]"}]}]}], "]"}]}], 
@@ -640,7 +568,8 @@ Cell[BoxData[{
   RowBox[{"DistributeDefinitions", "[", "GradientFunctions", "]"}], 
   ";"}]}], "Input",
  CellChangeTimes->{{3.4831314350215564`*^9, 3.4831314354902887`*^9}, {
-  3.488343509189095*^9, 3.488343524157968*^9}},
+  3.488343509189095*^9, 3.488343524157968*^9}, {3.490050256567112*^9, 
+  3.490050258230968*^9}},
  CellTags->"PlateFunction_And_Gradient_Generation"]
 }, Open  ]],
 
@@ -981,7 +910,7 @@ Cell[BoxData[{
            RowBox[{"i2", ",", "j2", ",", "1"}], "]"}], "]"}]}], ";"}]}], 
       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
      "\[IndentingNewLine]", 
-     RowBox[{"FirstBullShit", " ", "=", " ", 
+     RowBox[{"DiffusionInnerProduct", " ", "=", " ", 
       RowBox[{"\[Epsilon]", "*", "0.5", "*", 
        RowBox[{"h", "^", "2"}], "*", 
        RowBox[{"(", 
@@ -1011,7 +940,7 @@ Cell[BoxData[{
               RowBox[{"PlateB", "[", 
                RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}]}], "]"}]}], 
         ")"}]}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"SecondBullShit", " ", "=", " ", 
+     RowBox[{"ConvectionInnerProduct", " ", "=", " ", 
       RowBox[{
        RowBox[{
         SubsuperscriptBox["\[Integral]", "LowerXBound", "UpperXBound"], 
@@ -1065,7 +994,7 @@ Cell[BoxData[{
           RowBox[{"\[DifferentialD]", "y"}], 
           RowBox[{"\[DifferentialD]", "x"}]}]}]}]}]}], ";", 
      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"ThirdBullShit", " ", "=", " ", 
+     RowBox[{"ReactionInnerProduct", " ", "=", " ", 
       RowBox[{"constant", "*", 
        RowBox[{"(", 
         RowBox[{
@@ -1175,7 +1104,8 @@ Cell[BoxData[{
    3.48882724879709*^9, 3.488827258641139*^9}, 3.488839134712984*^9, {
    3.488857143166047*^9, 3.488857311589284*^9}, {3.488857361918268*^9, 
    3.488857388496732*^9}, {3.488857424062652*^9, 3.488857503244873*^9}, {
-   3.488857719559768*^9, 3.488857737825469*^9}},
+   3.488857719559768*^9, 3.488857737825469*^9}, {3.490050273407167*^9, 
+   3.490050306655175*^9}, {3.490050341290284*^9, 3.4900503454202347`*^9}},
  CellTags->"Stiffness_Matrix_Generation"],
 
 Cell[BoxData[{
@@ -1202,7 +1132,7 @@ Cell[BoxData[{
      RowBox[{"LowerYAlt", " ", "=", " ", 
       RowBox[{"StandardY", "-", "h"}]}], ";", "\[IndentingNewLine]", 
      "\[IndentingNewLine]", 
-     RowBox[{"FirstBullShit", " ", "=", " ", 
+     RowBox[{"DiffusionInnerProduct", " ", "=", " ", 
       RowBox[{"Sum", "[", 
        RowBox[{
         RowBox[{"\[Epsilon]", "*", "0.5", "*", 
@@ -1220,7 +1150,7 @@ Cell[BoxData[{
         RowBox[{"{", 
          RowBox[{"m", ",", "1", ",", "6"}], "}"}]}], "]"}]}], ";", 
      "\[IndentingNewLine]", 
-     RowBox[{"SecondBullShit", " ", "=", 
+     RowBox[{"ConvectionInnerProduct", " ", "=", 
       RowBox[{
        RowBox[{
         SubsuperscriptBox["\[Integral]", "LowerXAlt", "StandardX"], 
@@ -1331,7 +1261,7 @@ Cell[BoxData[{
           RowBox[{"\[DifferentialD]", "y"}], 
           RowBox[{"\[DifferentialD]", "x"}]}]}]}]}]}], ";", 
      "\[IndentingNewLine]", 
-     RowBox[{"ThirdBullShit", " ", "=", "  ", 
+     RowBox[{"ReactionInnerProduct", "=", "  ", 
       RowBox[{"constant", "*", 
        RowBox[{"(", 
         RowBox[{
@@ -1490,7 +1420,8 @@ Cell[BoxData[{
    3.488826210148366*^9}, {3.488826964583043*^9, 3.488827155667323*^9}, {
    3.48882724879709*^9, 3.488827258641139*^9}, {3.488839134712984*^9, 
    3.488839146580199*^9}, {3.48885910350362*^9, 3.488859620390398*^9}, 
-   3.488859959213346*^9},
+   3.488859959213346*^9, {3.4900502876452303`*^9, 3.490050315209988*^9}, 
+   3.4900503565386877`*^9},
  CellTags->"Stiffness_Matrix_Generation"],
 
 Cell[BoxData[{
@@ -1510,11 +1441,11 @@ Cell[BoxData[{
        RowBox[{"i2", ",", " ", "j2"}], "}"}], " ", "=", " ", 
       RowBox[{"MeshCoordinates", "[", "Node2", "]"}]}], ";", 
      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"FirstBullShit", " ", "=", " ", "\"\<Null\>\""}], ";", 
+     RowBox[{"DiffusionInnerProduct", " ", "=", " ", "\"\<Null\>\""}], ";", 
      "\[IndentingNewLine]", 
-     RowBox[{"SecondBullShit", " ", "=", " ", "\"\<Null\>\""}], ";", 
+     RowBox[{"ConvectionInnerProduct", " ", "=", " ", "\"\<Null\>\""}], ";", 
      "\[IndentingNewLine]", 
-     RowBox[{"ThirdBullShit", " ", "=", " ", "\"\<Null\>\""}], ";", 
+     RowBox[{"ReactionInnerProduct", " ", "=", " ", "\"\<Null\>\""}], ";", 
      "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"If", "[", 
       RowBox[{
@@ -1605,9 +1536,9 @@ Cell[BoxData[{
      "\[IndentingNewLine]", 
      RowBox[{"Return", "[", 
       RowBox[{
-      "FirstBullShit", " ", "+", " ", "SecondBullShit", " ", "+", " ", 
-       "ThirdBullShit"}], "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+      "DiffusionInnerProduct", " ", "+", " ", "ConvectionInnerProduct", " ", 
+       "+", " ", "ReactionInnerProduct"}], "]"}], ";"}], 
+    "\[IndentingNewLine]", ")"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"DistributeDefinitions", "[", "InnerProduct", "]"}], 
   ";"}]}], "Input",
@@ -1670,7 +1601,8 @@ Cell[BoxData[{
    3.48884483600146*^9, 3.488844867734385*^9}, {3.488844900077259*^9, 
    3.48884505096159*^9}, {3.488846365006743*^9, 3.488846389532181*^9}, {
    3.488847269114561*^9, 3.488847297855882*^9}, {3.488857669275047*^9, 
-   3.488857674274781*^9}, 3.488863461129543*^9},
+   3.488857674274781*^9}, 3.488863461129543*^9, {3.490050296168079*^9, 
+   3.490050369817808*^9}},
  CellTags->"Stiffness_Matrix_Generation"]
 }, Open  ]],
 
@@ -1697,7 +1629,7 @@ Cell[BoxData[{
          "InnerProduct", ",", "LowerBound", ",", "UpperBound", ",", 
         "meshconstant", ",", "\[Beta]"}], "}"}], " ", "=", " ", "Data"}], ";",
       "\[IndentingNewLine]", 
-     RowBox[{"BullshitVector", " ", "=", " ", 
+     RowBox[{"CDRVector", " ", "=", " ", 
       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"For", "[", 
       RowBox[{
@@ -1730,9 +1662,9 @@ Cell[BoxData[{
              RowBox[{
               RowBox[{"ibar", "+", "1"}], ",", "jbar"}], "]"}]}], ";", 
            "\[IndentingNewLine]", 
-           RowBox[{"BullshitVector", "=", " ", 
+           RowBox[{"CDRVector", "=", " ", 
             RowBox[{"Append", "[", 
-             RowBox[{"BullshitVector", ",", " ", 
+             RowBox[{"CDRVector", ",", " ", 
               RowBox[{"{", 
                RowBox[{"A", ",", "RightHandNode", ",", 
                 RowBox[{"InnerProduct", "[", 
@@ -1763,9 +1695,9 @@ Cell[BoxData[{
               RowBox[{"ibar", "+", "1"}], ",", 
               RowBox[{"jbar", "-", "1"}]}], "]"}]}], ";", 
            "\[IndentingNewLine]", 
-           RowBox[{"BullshitVector", "=", " ", 
+           RowBox[{"CDRVector", "=", " ", 
             RowBox[{"Append", "[", 
-             RowBox[{"BullshitVector", ",", " ", 
+             RowBox[{"CDRVector", ",", " ", 
               RowBox[{"{", 
                RowBox[{"A", ",", "RightDownNode", ",", 
                 RowBox[{"InnerProduct", "[", 
@@ -1790,9 +1722,9 @@ Cell[BoxData[{
              RowBox[{"ibar", ",", 
               RowBox[{"jbar", "-", "1"}]}], "]"}]}], ";", 
            "\[IndentingNewLine]", 
-           RowBox[{"BullshitVector", "=", " ", 
+           RowBox[{"CDRVector", "=", " ", 
             RowBox[{"Append", "[", 
-             RowBox[{"BullshitVector", ",", " ", 
+             RowBox[{"CDRVector", ",", " ", 
               RowBox[{"{", 
                RowBox[{"A", ",", "DownwardsNode", ",", 
                 RowBox[{"InnerProduct", "[", 
@@ -1803,17 +1735,17 @@ Cell[BoxData[{
          RowBox[{
          "Do", " ", "Inner", " ", "Product", " ", "with", " ", "itself"}], 
          " ", "*)"}], "\[IndentingNewLine]", 
-        RowBox[{"BullshitVector", "=", " ", 
+        RowBox[{"CDRVector", "=", " ", 
          RowBox[{"Append", "[", 
-          RowBox[{"BullshitVector", ",", " ", 
+          RowBox[{"CDRVector", ",", " ", 
            RowBox[{"{", 
             RowBox[{"A", ",", "A", ",", " ", 
              RowBox[{"InnerProduct", "[", 
               RowBox[{"A", ",", "A"}], "]"}]}], "}"}]}], "]"}]}], ";"}]}], 
       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
      RowBox[{"Share", "[", "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"Return", "[", "BullshitVector", "]"}], ";"}], 
-    "\[IndentingNewLine]", ")"}]}], ";"}], "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "CDRVector", "]"}], ";"}], "\[IndentingNewLine]", 
+    ")"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
   "DistributeDefinitions", "[", "DoStiffnessMatrixInnerProduct", "]"}], 
@@ -1857,7 +1789,8 @@ Cell[BoxData[{
    3.488840311800168*^9, {3.488840371970761*^9, 3.488840389688564*^9}, {
    3.488845990823309*^9, 3.488845999343467*^9}, {3.488846048450603*^9, 
    3.488846096583709*^9}, {3.488846408226283*^9, 3.488846448851022*^9}, {
-   3.488847372402258*^9, 3.48884737277869*^9}},
+   3.488847372402258*^9, 3.48884737277869*^9}, {3.490050377412469*^9, 
+   3.490050421102126*^9}},
  CellTags->"Client_Stiffness_Matrix_Actions"]
 }, Open  ]],
 
@@ -2572,14 +2505,14 @@ Cell[BoxData[
  CellTags->"Date_Time_CPUTimeUsed"]
 }, Open  ]]
 },
-WindowSize->{1438, 844},
-WindowMargins->{{1, Automatic}, {5, Automatic}},
+WindowSize->{1280, 681},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 PrintingPageRange->{Automatic, Automatic},
 PrintingOptions->{"Magnification"->1.,
 "PaperOrientation"->"Portrait",
 "PaperSize"->{611.28, 789.57},
 "PostScriptOutputFile"->"/home/robert/Projects/Bamboo/problem2.pdf"},
-FrontEndVersion->"7.0 for Linux x86 (32-bit) (February 25, 2009)",
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (February 18, 2009)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -2588,241 +2521,236 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "PDE_Parameters"->{
-  Cell[567, 22, 128, 2, 73, "Section",
+  Cell[567, 22, 128, 2, 67, "Section",
    CellTags->"PDE_Parameters"],
-  Cell[698, 26, 5464, 89, 209, "Input",
+  Cell[698, 26, 5464, 89, 148, "Input",
    CellTags->"PDE_Parameters"]},
  "Worker_Initialization"->{
-  Cell[9270, 193, 256, 4, 73, "Section",
+  Cell[6199, 120, 256, 4, 67, "Section",
    CellTags->"Worker_Initialization"],
-  Cell[9529, 199, 1143, 24, 99, "Input",
+  Cell[6458, 126, 1143, 24, 73, "Input",
    CellTags->"Worker_Initialization"]},
  "Mesh_Parameters"->{
-  Cell[10709, 228, 160, 3, 73, "Section",
+  Cell[7638, 155, 160, 3, 67, "Section",
    CellTags->"Mesh_Parameters"],
-  Cell[10872, 233, 3458, 51, 78, "Input",
+  Cell[7801, 160, 3458, 51, 64, "Input",
    CellTags->"Mesh_Parameters"]},
  "FOMesh_Generation"->{
-  Cell[14367, 289, 68, 1, 73, "Section",
+  Cell[11296, 216, 68, 1, 67, "Section",
    CellTags->"FOMesh_Generation"],
-  Cell[14438, 292, 8139, 218, 737, "Input",
+  Cell[11367, 219, 8139, 218, 508, "Input",
    CellTags->"FOMesh_Generation"],
-  Cell[22580, 512, 833, 22, 78, "Input",
+  Cell[19509, 439, 833, 22, 64, "Input",
    CellTags->"FOMesh_Generation"]},
  "PlateFunction_And_Gradient_Generation"->{
-  Cell[23761, 547, 106, 1, 73, "Section",
+  Cell[20690, 474, 106, 1, 67, "Section",
    CellTags->"PlateFunction_And_Gradient_Generation"],
-  Cell[23870, 550, 1436, 40, 144, "Input",
+  Cell[20799, 477, 1436, 40, 109, "Input",
    CellTags->"PlateFunction_And_Gradient_Generation"],
-  Cell[25309, 592, 476, 13, 55, "Input",
+  Cell[22238, 519, 518, 14, 43, "Input",
    CellTags->"PlateFunction_And_Gradient_Generation"],
-  Cell[25788, 607, 1275, 36, 144, "Input",
+  Cell[22759, 535, 1321, 37, 109, "Input",
    CellTags->"PlateFunction_And_Gradient_Generation"]},
  "LoadVector_Generation"->{
-  Cell[27100, 648, 144, 2, 73, "Section",
+  Cell[24117, 577, 144, 2, 67, "Section",
    CellTags->"LoadVector_Generation"],
-  Cell[27247, 652, 4828, 130, 649, "Input",
+  Cell[24264, 581, 4828, 130, 448, "Input",
    CellTags->"LoadVector_Generation"],
-  Cell[32078, 784, 1480, 39, 143, "Input",
+  Cell[29095, 713, 1480, 39, 103, "Input",
    CellTags->"LoadVector_Generation"]},
  "Stiffness_Matrix_Generation"->{
-  Cell[33595, 828, 209, 3, 73, "Section",
+  Cell[30612, 757, 209, 3, 67, "Section",
    CellTags->"Stiffness_Matrix_Generation"],
-  Cell[33807, 833, 5161, 88, 99, "Input",
+  Cell[30824, 762, 5161, 88, 73, "Input",
    CellTags->"Stiffness_Matrix_Generation"],
-  Cell[38971, 923, 12115, 255, 638, "Input",
+  Cell[35988, 852, 12236, 256, 538, "Input",
    CellTags->"Stiffness_Matrix_Generation"],
-  Cell[51089, 1180, 15187, 313, 774, "Input",
+  Cell[48227, 1110, 15281, 314, 715, "Input",
    CellTags->"Stiffness_Matrix_Generation"],
-  Cell[66279, 1495, 9474, 178, 825, "Input",
+  Cell[63511, 1426, 9572, 179, 568, "Input",
    CellTags->"Stiffness_Matrix_Generation"]},
  "Client_Stiffness_Matrix_Actions"->{
-  Cell[75790, 1678, 223, 5, 73, "Section",
+  Cell[73120, 1610, 223, 5, 67, "Section",
    CellTags->"Client_Stiffness_Matrix_Actions"],
-  Cell[76016, 1685, 8763, 175, 715, "Input",
+  Cell[73346, 1617, 8763, 176, 493, "Input",
    CellTags->"Client_Stiffness_Matrix_Actions"]},
  "Laplacian_Operator_Stiffness_Matrix_Evaluation"->{
-  Cell[84816, 1865, 237, 3, 73, "Section",
+  Cell[82146, 1798, 237, 3, 67, "Section",
    CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-  Cell[85056, 1870, 1282, 25, 55, "Input",
+  Cell[82386, 1803, 1282, 25, 49, "Input",
    CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-  Cell[86341, 1897, 1986, 48, 165, "Input",
+  Cell[83671, 1830, 1986, 48, 138, "Input",
    CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-  Cell[88330, 1947, 391, 8, 32, "Input",
+  Cell[85660, 1880, 391, 8, 27, "Input",
    CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-  Cell[88724, 1957, 2645, 56, 143, "Input",
+  Cell[86054, 1890, 2645, 56, 103, "Input",
    CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"]},
  "Load_Integral_Definition"->{
-  Cell[91606, 2023, 149, 2, 73, "Section",
+  Cell[88936, 1956, 149, 2, 67, "Section",
    CellTags->"Load_Integral_Definition"],
-  Cell[91758, 2027, 8720, 212, 783, "Input",
+  Cell[89088, 1960, 8720, 212, 728, "Input",
    CellTags->"Load_Integral_Definition"]},
  "Client_Load_Vector_Actions"->{
-  Cell[100515, 2244, 205, 3, 73, "Section",
+  Cell[97845, 2177, 205, 3, 67, "Section",
    CellTags->"Client_Load_Vector_Actions"],
-  Cell[100723, 2249, 3110, 59, 275, "Input",
+  Cell[98053, 2182, 3110, 59, 193, "Input",
    CellTags->"Client_Load_Vector_Actions"]},
  "LoadVector_Evaluation"->{
-  Cell[103870, 2313, 87, 1, 73, "Section",
+  Cell[101200, 2246, 87, 1, 67, "Section",
    CellTags->"LoadVector_Evaluation"],
-  Cell[103960, 2316, 1377, 33, 77, "Input",
+  Cell[101290, 2249, 1377, 33, 64, "Input",
    CellTags->"LoadVector_Evaluation"],
-  Cell[105340, 2351, 4285, 81, 275, "Input",
+  Cell[102670, 2284, 4285, 81, 223, "Input",
    CellTags->"LoadVector_Evaluation"]},
  "Solution"->{
-  Cell[109701, 2439, 50, 1, 73, "Section",
+  Cell[107031, 2372, 50, 1, 67, "Section",
    CellTags->"Solution"],
-  Cell[109754, 2442, 432, 9, 32, "Input",
+  Cell[107084, 2375, 432, 9, 27, "Input",
    CellTags->"Solution"],
-  Cell[110293, 2456, 1787, 42, 143, "Input",
+  Cell[107623, 2389, 1787, 42, 108, "Input",
    CellTags->"Solution"],
-  Cell[112249, 2505, 1244, 26, 77, "Input",
+  Cell[109579, 2438, 1244, 26, 58, "Input",
    CellTags->"Solution"]},
  "Date_Time_CPUTimeUsed"->{
-  Cell[113530, 2536, 181, 3, 73, "Section",
+  Cell[110860, 2469, 181, 3, 67, "Section",
    CellTags->"Date_Time_CPUTimeUsed"],
-  Cell[113714, 2541, 1476, 30, 187, "Input",
+  Cell[111044, 2474, 1476, 30, 133, "Input",
    CellTags->"Date_Time_CPUTimeUsed"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PDE_Parameters", 115713, 2589},
- {"Worker_Initialization", 115885, 2594},
- {"Mesh_Parameters", 116068, 2599},
- {"FOMesh_Generation", 116243, 2604},
- {"PlateFunction_And_Gradient_Generation", 116519, 2611},
- {"LoadVector_Generation", 116937, 2620},
- {"Stiffness_Matrix_Generation", 117218, 2627},
- {"Client_Stiffness_Matrix_Actions", 117702, 2638},
- {"Laplacian_Operator_Stiffness_Matrix_Evaluation", 117942, 2643},
- {"Load_Integral_Definition", 118509, 2654},
- {"Client_Load_Vector_Actions", 118715, 2659},
- {"LoadVector_Evaluation", 118921, 2664},
- {"Solution", 119186, 2671},
- {"Date_Time_CPUTimeUsed", 119493, 2680}
+ {"PDE_Parameters", 113046, 2522},
+ {"Worker_Initialization", 113218, 2527},
+ {"Mesh_Parameters", 113401, 2532},
+ {"FOMesh_Generation", 113574, 2537},
+ {"PlateFunction_And_Gradient_Generation", 113850, 2544},
+ {"LoadVector_Generation", 114268, 2553},
+ {"Stiffness_Matrix_Generation", 114549, 2560},
+ {"Client_Stiffness_Matrix_Actions", 115033, 2571},
+ {"Laplacian_Operator_Stiffness_Matrix_Evaluation", 115273, 2576},
+ {"Load_Integral_Definition", 115840, 2587},
+ {"Client_Load_Vector_Actions", 116046, 2592},
+ {"LoadVector_Evaluation", 116250, 2597},
+ {"Solution", 116515, 2604},
+ {"Date_Time_CPUTimeUsed", 116822, 2613}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[567, 22, 128, 2, 73, "Section",
+Cell[567, 22, 128, 2, 67, "Section",
  CellTags->"PDE_Parameters"],
-Cell[698, 26, 5464, 89, 209, "Input",
+Cell[698, 26, 5464, 89, 148, "Input",
  CellTags->"PDE_Parameters"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6199, 120, 144, 2, 73, "Section"],
-Cell[6346, 124, 758, 16, 32, "Input"],
-Cell[7107, 142, 2126, 46, 341, "Input"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[9270, 193, 256, 4, 73, "Section",
+Cell[6199, 120, 256, 4, 67, "Section",
  CellTags->"Worker_Initialization"],
-Cell[9529, 199, 1143, 24, 99, "Input",
+Cell[6458, 126, 1143, 24, 73, "Input",
  CellTags->"Worker_Initialization"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10709, 228, 160, 3, 73, "Section",
+Cell[7638, 155, 160, 3, 67, "Section",
  CellTags->"Mesh_Parameters"],
-Cell[10872, 233, 3458, 51, 78, "Input",
+Cell[7801, 160, 3458, 51, 64, "Input",
  CellTags->"Mesh_Parameters"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14367, 289, 68, 1, 73, "Section",
+Cell[11296, 216, 68, 1, 67, "Section",
  CellTags->"FOMesh_Generation"],
-Cell[14438, 292, 8139, 218, 737, "Input",
+Cell[11367, 219, 8139, 218, 508, "Input",
  CellTags->"FOMesh_Generation"],
-Cell[22580, 512, 833, 22, 78, "Input",
+Cell[19509, 439, 833, 22, 64, "Input",
  CellTags->"FOMesh_Generation"],
-Cell[23416, 536, 308, 6, 55, "Input"]
+Cell[20345, 463, 308, 6, 43, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23761, 547, 106, 1, 73, "Section",
+Cell[20690, 474, 106, 1, 67, "Section",
  CellTags->"PlateFunction_And_Gradient_Generation"],
-Cell[23870, 550, 1436, 40, 144, "Input",
+Cell[20799, 477, 1436, 40, 109, "Input",
  CellTags->"PlateFunction_And_Gradient_Generation"],
-Cell[25309, 592, 476, 13, 55, "Input",
+Cell[22238, 519, 518, 14, 43, "Input",
  CellTags->"PlateFunction_And_Gradient_Generation"],
-Cell[25788, 607, 1275, 36, 144, "Input",
+Cell[22759, 535, 1321, 37, 109, "Input",
  CellTags->"PlateFunction_And_Gradient_Generation"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27100, 648, 144, 2, 73, "Section",
+Cell[24117, 577, 144, 2, 67, "Section",
  CellTags->"LoadVector_Generation"],
-Cell[27247, 652, 4828, 130, 649, "Input",
+Cell[24264, 581, 4828, 130, 448, "Input",
  CellTags->"LoadVector_Generation"],
-Cell[32078, 784, 1480, 39, 143, "Input",
+Cell[29095, 713, 1480, 39, 103, "Input",
  CellTags->"LoadVector_Generation"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33595, 828, 209, 3, 73, "Section",
+Cell[30612, 757, 209, 3, 67, "Section",
  CellTags->"Stiffness_Matrix_Generation"],
-Cell[33807, 833, 5161, 88, 99, "Input",
+Cell[30824, 762, 5161, 88, 73, "Input",
  CellTags->"Stiffness_Matrix_Generation"],
-Cell[38971, 923, 12115, 255, 638, "Input",
+Cell[35988, 852, 12236, 256, 538, "Input",
  CellTags->"Stiffness_Matrix_Generation"],
-Cell[51089, 1180, 15187, 313, 774, "Input",
+Cell[48227, 1110, 15281, 314, 715, "Input",
  CellTags->"Stiffness_Matrix_Generation"],
-Cell[66279, 1495, 9474, 178, 825, "Input",
+Cell[63511, 1426, 9572, 179, 568, "Input",
  CellTags->"Stiffness_Matrix_Generation"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[75790, 1678, 223, 5, 73, "Section",
+Cell[73120, 1610, 223, 5, 67, "Section",
  CellTags->"Client_Stiffness_Matrix_Actions"],
-Cell[76016, 1685, 8763, 175, 715, "Input",
+Cell[73346, 1617, 8763, 176, 493, "Input",
  CellTags->"Client_Stiffness_Matrix_Actions"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[84816, 1865, 237, 3, 73, "Section",
+Cell[82146, 1798, 237, 3, 67, "Section",
  CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-Cell[85056, 1870, 1282, 25, 55, "Input",
+Cell[82386, 1803, 1282, 25, 49, "Input",
  CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-Cell[86341, 1897, 1986, 48, 165, "Input",
+Cell[83671, 1830, 1986, 48, 138, "Input",
  CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-Cell[88330, 1947, 391, 8, 32, "Input",
+Cell[85660, 1880, 391, 8, 27, "Input",
  CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-Cell[88724, 1957, 2645, 56, 143, "Input",
+Cell[86054, 1890, 2645, 56, 103, "Input",
  CellTags->"Laplacian_Operator_Stiffness_Matrix_Evaluation"],
-Cell[91372, 2015, 197, 3, 32, "Input"]
+Cell[88702, 1948, 197, 3, 27, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[91606, 2023, 149, 2, 73, "Section",
+Cell[88936, 1956, 149, 2, 67, "Section",
  CellTags->"Load_Integral_Definition"],
-Cell[91758, 2027, 8720, 212, 783, "Input",
+Cell[89088, 1960, 8720, 212, 728, "Input",
  CellTags->"Load_Integral_Definition"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[100515, 2244, 205, 3, 73, "Section",
+Cell[97845, 2177, 205, 3, 67, "Section",
  CellTags->"Client_Load_Vector_Actions"],
-Cell[100723, 2249, 3110, 59, 275, "Input",
+Cell[98053, 2182, 3110, 59, 193, "Input",
  CellTags->"Client_Load_Vector_Actions"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[103870, 2313, 87, 1, 73, "Section",
+Cell[101200, 2246, 87, 1, 67, "Section",
  CellTags->"LoadVector_Evaluation"],
-Cell[103960, 2316, 1377, 33, 77, "Input",
+Cell[101290, 2249, 1377, 33, 64, "Input",
  CellTags->"LoadVector_Evaluation"],
-Cell[105340, 2351, 4285, 81, 275, "Input",
+Cell[102670, 2284, 4285, 81, 223, "Input",
  CellTags->"LoadVector_Evaluation"],
-Cell[109628, 2434, 36, 0, 32, "Input"]
+Cell[106958, 2367, 36, 0, 27, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[109701, 2439, 50, 1, 73, "Section",
+Cell[107031, 2372, 50, 1, 67, "Section",
  CellTags->"Solution"],
-Cell[109754, 2442, 432, 9, 32, "Input",
+Cell[107084, 2375, 432, 9, 27, "Input",
  CellTags->"Solution"],
-Cell[110189, 2453, 101, 1, 32, "Input"],
-Cell[110293, 2456, 1787, 42, 143, "Input",
+Cell[107519, 2386, 101, 1, 27, "Input"],
+Cell[107623, 2389, 1787, 42, 108, "Input",
  CellTags->"Solution"],
-Cell[112083, 2500, 163, 3, 32, "Input"],
-Cell[112249, 2505, 1244, 26, 77, "Input",
+Cell[109413, 2433, 163, 3, 27, "Input"],
+Cell[109579, 2438, 1244, 26, 58, "Input",
  CellTags->"Solution"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[113530, 2536, 181, 3, 73, "Section",
+Cell[110860, 2469, 181, 3, 67, "Section",
  CellTags->"Date_Time_CPUTimeUsed"],
-Cell[113714, 2541, 1476, 30, 187, "Input",
+Cell[111044, 2474, 1476, 30, 133, "Input",
  CellTags->"Date_Time_CPUTimeUsed"]
 }, Open  ]]
 }
