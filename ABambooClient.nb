@@ -1,0 +1,713 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     29996,        704]
+NotebookOptionsPosition[     28348,        648]
+NotebookOutlinePosition[     29236,        678]
+CellTagsIndexPosition[     29097,        672]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<VectorAnalysis`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.4833104721466384`*^9, 3.483310479912214*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Settings", "Section"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"PortList", " ", "=", " ", "\"\<1183,1184\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NickName", " ", "=", " ", "\"\<Client 2\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PBarY", " ", "=", " ", "100"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MBarY", " ", "=", " ", "200"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MaxMemory", " ", "=", " ", 
+   RowBox[{"2000.0", "*", 
+    SuperscriptBox["10", "6"]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.483122631015965*^9, 3.4831226385053697`*^9}, {
+  3.4831306905573373`*^9, 3.4831307090090675`*^9}, {3.483172361448004*^9, 
+  3.483172361854241*^9}, {3.4831736714998307`*^9, 3.483173671952941*^9}, {
+  3.4833806915921526`*^9, 3.4833806917483997`*^9}, {3.489430991001446*^9, 
+  3.489430991454211*^9}, {3.4894374125840464`*^9, 3.4894374371773243`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Initialization Code", "Section",
+ CellChangeTimes->{{3.483164910889205*^9, 3.48316491715467*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ValueQ", "[", "AllIsDefined", "]"}], " ", "\[Equal]", " ", 
+     "False"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Server", " ", "=", " ", 
+      RowBox[{"LinkCreate", "[", 
+       RowBox[{"PortList", ",", 
+        RowBox[{"LinkProtocol", " ", "\[Rule]", " ", "\"\<TCPIP\>\""}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"AllIsDefined", " ", "=", " ", "True"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.483164927826271*^9, 3.4831649853402967`*^9}, 
+   3.483165053244374*^9, {3.48316555085345*^9, 3.48316558303992*^9}, {
+   3.490048807016296*^9, 3.490048811043771*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ProgressBar Code", "Section",
+ CellChangeTimes->{{3.483164823625814*^9, 3.483164829578787*^9}, {
+  3.4831648935927725`*^9, 3.4831649009832087`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Needs", "[", "\"\<JLink`\>\"", "]"}], "\n", 
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"General", "::", "spell1"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ShowProgressBar", "[", 
+    RowBox[{
+     RowBox[{"title_String:", "\"\<Computation Progress\>\""}], ",", " ", 
+     RowBox[{"YLocation_Integer:", " ", "400"}], ",", 
+     RowBox[{"caption_String:", "\"\<Percent complete:\>\""}], ",", 
+     RowBox[{"percent_Integer:", "0"}]}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"frame", ",", "panel", ",", "label", ",", "bar"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"InstallJava", "[", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"bar", "=", 
+       RowBox[{"JavaNew", "[", "\"\<javax.swing.JProgressBar\>\"", "]"}]}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"JavaBlock", "[", 
+       RowBox[{
+        RowBox[{"frame", "=", 
+         RowBox[{"JavaNew", "[", 
+          RowBox[{"\"\<javax.swing.JFrame\>\"", ",", "title"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"frame", "@", 
+         RowBox[{"setSize", "[", 
+          RowBox[{"300", ",", "110"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"frame", "@", 
+         RowBox[{"setResizable", "[", "False", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"frame", "@", 
+         RowBox[{"setLocation", "[", 
+          RowBox[{"600", ",", "YLocation"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"panel", "=", 
+         RowBox[{"JavaNew", "[", "\"\<javax.swing.JPanel\>\"", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"panel", "@", 
+         RowBox[{"setLayout", "[", "Null", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"frame", "@", 
+         RowBox[{
+          RowBox[{"getContentPane", "[", "]"}], "@", 
+          RowBox[{"add", "[", "panel", "]"}]}]}], ";", "\[IndentingNewLine]", 
+        
+        RowBox[{"label", "=", 
+         RowBox[{"JavaNew", "[", 
+          RowBox[{"\"\<javax.swing.JLabel\>\"", ",", "caption"}], "]"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"label", "@", 
+         RowBox[{"setBounds", "[", 
+          RowBox[{"20", ",", "10", ",", "260", ",", "20"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"panel", "@", 
+         RowBox[{"add", "[", "label", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"bar", "@", 
+         RowBox[{"setBounds", "[", 
+          RowBox[{"20", ",", "40", ",", "260", ",", "30"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"bar", "@", 
+         RowBox[{"setMinimum", "[", "0", "]"}]}], ";", "\[IndentingNewLine]", 
+        
+        RowBox[{"bar", "@", 
+         RowBox[{"setMaximum", "[", "100", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"bar", "@", 
+         RowBox[{"setValue", "[", "percent", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"panel", "@", 
+         RowBox[{"add", "[", "bar", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"JavaShow", "[", "frame", "]"}], ";", "\[IndentingNewLine]", 
+        "bar"}], "]"}]}]}], "]"}]}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"DestroyProgressBar", "[", 
+    RowBox[{"bar_", "?", "JavaObjectQ"}], "]"}], ":=", 
+   RowBox[{"JavaBlock", "[", 
+    RowBox[{
+     RowBox[{"LoadClass", "[", "\"\<javax.swing.SwingUtilities\>\"", "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"SwingUtilities`windowForComponent", "[", "bar", "]"}], "@", 
+      RowBox[{"dispose", "[", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"ReleaseObject", "[", "bar", "]"}]}], "]"}]}], "\n", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ProgressBarDemo", "[", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"bar", ",", "n"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"bar", "=", 
+      RowBox[{"ShowProgressBar", "[", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"n", "=", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{"n", "\[LessEqual]", "5"}], ",", 
+       RowBox[{
+        RowBox[{"bar", "@", 
+         RowBox[{"setValue", "[", 
+          RowBox[{
+           RowBox[{"n", "/", "5"}], "*", "100"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Pause", "[", "1", "]"}], ";", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"This", " ", "simulates", " ", "the", " ", "time"}], "-", 
+          RowBox[{"consuming", " ", 
+           RowBox[{"computation", "."}]}]}], "*)"}], 
+        RowBox[{"n", "++"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"DestroyProgressBar", "[", "bar", "]"}], ";"}]}], 
+   "]"}]}]}], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Client Stiffness Matrix Actions", "Section",
+ CellChangeTimes->{{3.4833081380678267`*^9, 3.4833081454740295`*^9}, {
+  3.488860372483114*^9, 3.488860373693484*^9}},
+ CellTags->"Client_Stiffness_Matrix_Actions"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"DoStiffnessMatrixInnerProduct", "[", "Data_", "]"}], " ", ":=", 
+   " ", 
+   RowBox[{"(", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "FOMesh", ",", "GradientFunctions", ",", "PlateFunctions", ",", 
+        "BoundFunctions", ",", "MeshCoordinates", ",", "NodeNumber", ",", 
+        "InnerProduct", ",", "LowerBound", ",", "UpperBound", ",", 
+        "meshconstant", ",", "\[Beta]"}], "}"}], " ", "=", " ", "Data"}], ";",
+      "\[IndentingNewLine]", 
+     RowBox[{"PBar", " ", "=", " ", 
+      RowBox[{"ShowProgressBar", "[", 
+       RowBox[{"NickName", ",", "PBarY"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"NumIntegralSets", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"UpperBound", " ", "-", " ", "LowerBound"}], ")"}], " ", "+", 
+       " ", "1"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"CDRVector", " ", "=", " ", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"A", " ", "=", " ", "LowerBound"}], ",", " ", 
+       RowBox[{"A", " ", "\[LessEqual]", " ", "UpperBound"}], ",", " ", 
+       RowBox[{"A", "++"}], ",", "\[IndentingNewLine]", " ", 
+       RowBox[{
+        RowBox[{"coordinates", " ", "=", " ", 
+         RowBox[{"ReleaseHold", "[", 
+          RowBox[{"MeshCoordinates", "/.", 
+           RowBox[{"{", 
+            RowBox[{"Node", "\[Rule]", "A"}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"ibar", ",", " ", "jbar"}], "}"}], " ", "=", 
+         "coordinates"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{"Do", " ", "Righthand", " ", "Inner", " ", "Product"}], " ", 
+         "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"ibar", "+", "1"}], " ", "\[LessEqual]", "  ", 
+            "meshconstant"}], "&&", 
+           RowBox[{
+            RowBox[{"ibar", "+", "1"}], "\[GreaterEqual]", " ", "1"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"RightHandNode", "=", " ", 
+            RowBox[{"ReleaseHold", "[", 
+             RowBox[{"NodeNumber", "/.", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"xindex", "\[Rule]", " ", 
+                 RowBox[{"ibar", "+", "1"}]}], ",", 
+                RowBox[{"yindex", "\[Rule]", " ", "jbar"}]}], "}"}]}], 
+             "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"CDRVector", "=", " ", 
+            RowBox[{"Append", "[", 
+             RowBox[{"CDRVector", ",", " ", 
+              RowBox[{"{", 
+               RowBox[{"A", ",", "RightHandNode", ",", 
+                RowBox[{"ReleaseHold", "[", 
+                 RowBox[{"InnerProduct", "/.", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Node1", "\[Rule]", " ", "A"}], ",", 
+                    RowBox[{"Node2", "\[Rule]", " ", "RightHandNode"}]}], 
+                   "}"}]}], "]"}]}], "}"}]}], "]"}]}], ";"}]}], 
+         "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{"Do", " ", "RightDown", " ", "Inner", " ", "Product"}], " ", 
+         "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"ibar", "+", "1"}], "\[LessEqual]", " ", "meshconstant"}],
+            "&&", 
+           RowBox[{
+            RowBox[{"ibar", "+", "1"}], "\[GreaterEqual]", " ", "1"}], "&&", 
+           RowBox[{
+            RowBox[{"jbar", "-", "1"}], " ", "\[LessEqual]", "  ", 
+            "meshconstant"}], "&&", 
+           RowBox[{
+            RowBox[{"jbar", "-", "1"}], "\[GreaterEqual]", " ", "1"}]}], ",", 
+          " ", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"RightDownNode", " ", "=", " ", 
+            RowBox[{"ReleaseHold", "[", 
+             RowBox[{"NodeNumber", "/.", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"xindex", "\[Rule]", " ", 
+                 RowBox[{"ibar", "+", "1"}]}], ",", 
+                RowBox[{"yindex", "\[Rule]", " ", 
+                 RowBox[{"jbar", "-", "1"}]}]}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"CDRVector", "=", " ", 
+            RowBox[{"Append", "[", 
+             RowBox[{"CDRVector", ",", " ", 
+              RowBox[{"{", 
+               RowBox[{"A", ",", "RightDownNode", ",", 
+                RowBox[{"ReleaseHold", "[", 
+                 RowBox[{"InnerProduct", "/.", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Node1", "\[Rule]", " ", "A"}], ",", 
+                    RowBox[{"Node2", "\[Rule]", " ", "RightDownNode"}]}], 
+                   "}"}]}], "]"}]}], "}"}]}], "]"}]}], ";"}]}], 
+         "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{"Do", " ", "Downwards", " ", "Inner", " ", "Product"}], " ", 
+         "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"jbar", "-", "1"}], "\[LessEqual]", "  ", 
+            "meshconstant"}], "&&", 
+           RowBox[{
+            RowBox[{"jbar", "-", "1"}], "\[GreaterEqual]", " ", "1"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"DownwardsNode", " ", "=", " ", 
+            RowBox[{"ReleaseHold", "[", 
+             RowBox[{"NodeNumber", "/.", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"xindex", "\[Rule]", " ", "ibar"}], ",", 
+                RowBox[{"yindex", "\[Rule]", " ", 
+                 RowBox[{"jbar", "-", "1"}]}]}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"CDRVector", "=", " ", 
+            RowBox[{"Append", "[", 
+             RowBox[{"CDRVector", ",", " ", 
+              RowBox[{"{", 
+               RowBox[{"A", ",", "DownwardsNode", ",", 
+                RowBox[{"ReleaseHold", "[", 
+                 RowBox[{"InnerProduct", "/.", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Node1", "\[Rule]", " ", "A"}], ",", 
+                    RowBox[{"Node2", "\[Rule]", " ", "DownwardsNode"}]}], 
+                   "}"}]}], "]"}]}], "}"}]}], "]"}]}], ";"}]}], 
+         "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+         "Do", " ", "Inner", " ", "Product", " ", "with", " ", "itself"}], 
+         " ", "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"CDRVector", "=", " ", 
+         RowBox[{"Append", "[", 
+          RowBox[{"CDRVector", ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"A", ",", "A", ",", " ", 
+             RowBox[{"ReleaseHold", "[", 
+              RowBox[{"InnerProduct", "/.", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Node1", "\[Rule]", " ", "A"}], ",", 
+                 RowBox[{"Node2", "\[Rule]", " ", "A"}]}], "}"}]}], "]"}]}], 
+            "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"PBar", "@", 
+         RowBox[{"setValue", "[", 
+          RowBox[{"Floor", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"A", "-", "LowerBound", "+", "1"}], ")"}], "/", 
+             "NumIntegralSets"}], "*", "100"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"MemoryInUse", "[", "]"}], " ", ">", " ", "MaxMemory"}], 
+          ",", " ", 
+          RowBox[{"ClearSystemCache", "[", "]"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"MBar", "@", 
+         RowBox[{"setValue", "[", 
+          RowBox[{"Floor", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"MemoryInUse", "[", "]"}], "/", "MaxMemory"}], "*", 
+            "100"}], "]"}], "]"}]}], ";"}]}], "\[IndentingNewLine]", "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"Share", "[", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"LinkWrite", "[", 
+      RowBox[{"Server", ",", "CDRVector"}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"DestroyProgressBar", "[", "PBar", "]"}], ";"}], 
+    "\[IndentingNewLine]", ")"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.4833081507552457`*^9, 3.483308331769712*^9}, {
+   3.4833085473777075`*^9, 3.483308576893143*^9}, {3.4833090843430204`*^9, 
+   3.483309102655403*^9}, {3.4833098988378077`*^9, 3.483309937665684*^9}, {
+   3.483310327710063*^9, 3.483310330335046*^9}, 3.48331036261609*^9, {
+   3.4833104964902325`*^9, 3.483310585614662*^9}, {3.483310620911311*^9, 
+   3.4833107378168135`*^9}, {3.4833108447067537`*^9, 3.483310856144181*^9}, {
+   3.483311002475175*^9, 3.4833110727956486`*^9}, {3.4833111031829667`*^9, 
+   3.483311146881337*^9}, {3.48331118743945*^9, 3.483311242843218*^9}, {
+   3.4833114792388763`*^9, 3.483311482676223*^9}, {3.4833116065331087`*^9, 
+   3.483311658313364*^9}, {3.483311835013404*^9, 3.4833119148717566`*^9}, {
+   3.483311976745964*^9, 3.483312010245536*^9}, {3.4833151946690283`*^9, 
+   3.483315202294858*^9}, {3.4833157725359936`*^9, 3.483315791208108*^9}, {
+   3.4833175559039373`*^9, 3.4833176034817576`*^9}, {3.483317670215706*^9, 
+   3.4833176756844206`*^9}, {3.4833182823992877`*^9, 
+   3.4833182838367786`*^9}, {3.4833183300396075`*^9, 3.483318349383234*^9}, {
+   3.4833184732105665`*^9, 3.4833185279289665`*^9}, {3.4833185916004333`*^9, 
+   3.483318601100373*^9}, {3.483319812937313*^9, 3.483319858123945*^9}, {
+   3.483319892076418*^9, 3.483319898388797*^9}, {3.483319986418357*^9, 
+   3.483319987746456*^9}, {3.483320028464847*^9, 3.483320039464777*^9}, {
+   3.483320346900309*^9, 3.4833205051649213`*^9}, {3.4833205369615927`*^9, 
+   3.4833205517271233`*^9}, {3.483320589851879*^9, 3.4833206159923368`*^9}, {
+   3.4833207485227385`*^9, 3.4833207505539756`*^9}, {3.483373671119248*^9, 
+   3.4833736891051254`*^9}, {3.483373827952571*^9, 3.4833738483483725`*^9}, {
+   3.4833738868130436`*^9, 3.4833739563399277`*^9}, {3.4833739866369076`*^9, 
+   3.483374057381918*^9}, {3.4833786932959356`*^9, 3.483378799280989*^9}, {
+   3.4833799171547837`*^9, 3.4833799175922837`*^9}, {3.4833804478819213`*^9, 
+   3.483380544376363*^9}, {3.4833826635597267`*^9, 3.4833826769351544`*^9}, {
+   3.483382946791552*^9, 3.483382948150901*^9}, {3.4833853787992105`*^9, 
+   3.4833853920643263`*^9}, {3.4878249949017878`*^9, 3.487824997515284*^9}, {
+   3.488379320672551*^9, 3.488379368305269*^9}, {3.488380518229274*^9, 
+   3.488380539298075*^9}, {3.488385144682996*^9, 3.488385151400827*^9}, {
+   3.488412117706899*^9, 3.48841213086618*^9}, {3.488776138448702*^9, 
+   3.48877621787932*^9}, {3.4887762949265127`*^9, 3.488776373472135*^9}, {
+   3.488813983619953*^9, 3.488814005571229*^9}, {3.488814937316456*^9, 
+   3.488814960415975*^9}, {3.488814991513234*^9, 3.488815078860644*^9}, 
+   3.488825994618519*^9, {3.488839732111825*^9, 3.488839748983654*^9}, 
+   3.488840311800168*^9, {3.488840371970761*^9, 3.488840389688564*^9}, {
+   3.488845990823309*^9, 3.488845999343467*^9}, {3.488846048450603*^9, 
+   3.488846096583709*^9}, {3.488846408226283*^9, 3.488846448851022*^9}, {
+   3.488847372402258*^9, 3.48884737277869*^9}, {3.489424826610693*^9, 
+   3.489424828118827*^9}, {3.489426679036756*^9, 3.489426705884695*^9}, {
+   3.489429584190103*^9, 3.489429602285389*^9}, {3.489429638162382*^9, 
+   3.489429862116817*^9}, {3.489429961599134*^9, 3.489430033941723*^9}, {
+   3.489431642480232*^9, 3.4894316504473257`*^9}, {3.4894321129376698`*^9, 
+   3.4894321213119726`*^9}, {3.48943561493499*^9, 3.489435615435003*^9}, {
+   3.4900488752241488`*^9, 3.490048945688279*^9}},
+ CellTags->"Client_Stiffness_Matrix_Actions"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Client Load Vector Actions", "Section",
+ CellChangeTimes->{{3.483165270393675*^9, 3.483165271237398*^9}, {
+  3.4833120275265646`*^9, 3.4833120304640265`*^9}},
+ CellTags->"Client_Load_Vector_Actions"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"DoLoadVectorInnerProduct", "[", "Data_", "]"}], " ", ":=", " ", 
+    RowBox[{"(", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "LoadIntegral", ",", " ", "loadfun", ",", "FOMesh", ",", " ", 
+         "BoundFunctions", ",", " ", "PlateFunctions", ",", " ", "LowerBound",
+          ",", " ", "UpperBound", ",", "meshconstant"}], "}"}], " ", "=", " ",
+        "Data"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"PBar", " ", "=", " ", 
+       RowBox[{"ShowProgressBar", "[", 
+        RowBox[{"NickName", ",", " ", "PBarY"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"NumIntegralSets", " ", "=", " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"UpperBound", " ", "-", " ", "LowerBound"}], ")"}], " ", "+",
+         " ", "1"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"IntermediaryIntegral", " ", "=", " ", 
+       RowBox[{"LoadIntegral", " ", "/.", " ", 
+        RowBox[{"{", 
+         RowBox[{"lf", " ", "\[Rule]", " ", "loadfun"}], "}"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ComputeNthLoadIntegral", "[", "n_", "]"}], ":=", 
+       RowBox[{"(", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"i", " ", "=", " ", 
+          RowBox[{
+           RowBox[{"Mod", "[", 
+            RowBox[{
+             RowBox[{"n", "-", "1"}], ",", "meshconstant"}], "]"}], "+", 
+           "1"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"j", "=", 
+          RowBox[{
+           RowBox[{"Quotient", "[", 
+            RowBox[{
+             RowBox[{"n", "-", "1"}], ",", "meshconstant"}], "]"}], "+", 
+           "1"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"IntegralValue", " ", "=", " ", 
+          RowBox[{"ReleaseHold", "[", "IntermediaryIntegral", "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"PBar", "@", 
+          RowBox[{"setValue", "[", 
+           RowBox[{"Floor", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"n", " ", "-", " ", "LowerBound", " ", "+", " ", "1"}],
+                ")"}], "/", "NumIntegralSets"}], "*", "100"}], "]"}], "]"}]}],
+          ";", "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"MemoryInUse", "[", "]"}], " ", ">", " ", "MaxMemory"}], 
+           ",", " ", 
+           RowBox[{"ClearSystemCache", "[", "]"}]}], "]"}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"MBar", "@", 
+          RowBox[{"setValue", "[", 
+           RowBox[{"Floor", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"MemoryInUse", "[", "]"}], "/", "MaxMemory"}], " ", "*",
+              " ", "100"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+         "IntegralValue"}], "\[IndentingNewLine]", ")"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"results", " ", "=", " ", 
+       RowBox[{"Map", "[", 
+        RowBox[{"ComputeNthLoadIntegral", ",", 
+         RowBox[{"Range", "[", 
+          RowBox[{"LowerBound", ",", "UpperBound"}], "]"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Share", "[", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"LinkWrite", "[", 
+       RowBox[{"Server", ",", "results"}], "]"}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"Return", "[", "results", "]"}], ";"}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"DestroyProgressBar", "[", "PBar", "]"}], ";"}], 
+     "\[IndentingNewLine]", ")"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"DoShutDown", "[", "Data_", "]"}], " ", ":=", " ", 
+   RowBox[{"(", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"LinkClose", "[", "Server", "]"}], ";"}], "\[IndentingNewLine]", 
+    ")"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.483165173396779*^9, 3.4831652043645377`*^9}, 
+   3.4831652355822887`*^9, {3.483172343011094*^9, 3.483172345729757*^9}, {
+   3.4833115505498085`*^9, 3.483311551659162*^9}, {3.483311881606557*^9, 
+   3.4833118819659276`*^9}, {3.4833206360547085`*^9, 3.483320639679685*^9}, {
+   3.483320728350993*^9, 3.483320731460348*^9}, {3.4883794286352882`*^9, 
+   3.488379450174908*^9}, {3.488380578878727*^9, 3.488380589390506*^9}, {
+   3.488387005587485*^9, 3.488387010409295*^9}, {3.488777170912509*^9, 
+   3.488777195719639*^9}, {3.488777429401677*^9, 3.4887774382075443`*^9}, {
+   3.488777642178712*^9, 3.48877765156985*^9}, {3.488778208889602*^9, 
+   3.488778229574929*^9}, {3.488778592940573*^9, 3.488778594439101*^9}, {
+   3.488779260063382*^9, 3.488779262961784*^9}, {3.48877936212281*^9, 
+   3.488779374388145*^9}, {3.488779523394258*^9, 3.488779523778677*^9}, {
+   3.488780325672984*^9, 3.488780386859313*^9}, {3.4887804570671*^9, 
+   3.488780459372405*^9}, {3.488780588387063*^9, 3.488780619686543*^9}, {
+   3.488780664685529*^9, 3.488780673474408*^9}, {3.488780706547014*^9, 
+   3.488780712339774*^9}, {3.488780793928025*^9, 3.488780808612847*^9}, {
+   3.488780946725557*^9, 3.488780953797428*^9}, {3.488781500377736*^9, 
+   3.488781509416111*^9}, {3.488816696248684*^9, 3.488816703506755*^9}, {
+   3.488818371460873*^9, 3.488818386290735*^9}, 3.4894256026095552`*^9, {
+   3.489426075919066*^9, 3.4894260856883497`*^9}, {3.489430054245335*^9, 
+   3.489430117301366*^9}, {3.489430152699829*^9, 3.489430207932168*^9}, {
+   3.4894302517304163`*^9, 3.489430257278091*^9}, {3.48943147298676*^9, 
+   3.489431476203903*^9}, {3.489433100799704*^9, 3.4894331028308887`*^9}, {
+   3.489433319230549*^9, 3.4894333223710938`*^9}, 3.489433535757183*^9},
+ CellTags->"Client_Load_Vector_Actions"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Client Loop", "Section",
+ CellChangeTimes->{{3.4831652752685184`*^9, 3.483165277018463*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"MBar", " ", "=", " ", 
+   RowBox[{"ShowProgressBar", "[", 
+    RowBox[{
+     RowBox[{"NickName", "<>", "\"\< Memory Usage\>\""}], ",", "MBarY", ",", 
+     "\"\<Percent Full\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"While", "[", 
+  RowBox[{"True", ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Action", ",", " ", "Data"}], "}"}], " ", "=", 
+     RowBox[{"LinkRead", "[", "Server", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+      "Action", " ", "\[Equal]", " ", "\"\<Inner Product Stiffness\>\""}], 
+      ",", " ", 
+      RowBox[{"DoStiffnessMatrixInnerProduct", "[", "Data", "]"}]}], "]"}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"Action", " ", "\[Equal]", " ", "\"\<Inner Product\>\""}], ",", 
+      
+      RowBox[{"DoLoadVectorInnerProduct", "[", "Data", "]"}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"Action", " ", "\[Equal]", " ", "\"\<Shut Down Client\>\""}], 
+      ",", " ", 
+      RowBox[{"DoShutDown", "[", "Data", "]"}]}], "]"}], ";"}]}], 
+  "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DestroyProgressBar", "[", "MBar", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.4827995483730803`*^9, 3.4827995535293303`*^9}, {
+   3.4827996274043303`*^9, 3.4827996375137053`*^9}, {3.4827997716074553`*^9, 
+   3.4827997798262053`*^9}, {3.4828023579980803`*^9, 
+   3.4828024101230803`*^9}, {3.4828024499668303`*^9, 
+   3.4828024759199553`*^9}, {3.4828026245137053`*^9, 
+   3.4828026284668303`*^9}, {3.4828026586074553`*^9, 
+   3.4828026597793303`*^9}, {3.4828035585137053`*^9, 
+   3.4828035598105803`*^9}, {3.4828036660137053`*^9, 
+   3.4828036723730803`*^9}, {3.4828041551387053`*^9, 
+   3.4828041585137053`*^9}, {3.4831433684462166`*^9, 3.483143381649764*^9}, {
+   3.483147172124689*^9, 3.4831471955023813`*^9}, {3.483147670923004*^9, 
+   3.483147715829585*^9}, 3.4831648774838104`*^9, {3.4831651461164017`*^9, 
+   3.4831651466788836`*^9}, {3.4831652333011117`*^9, 
+   3.4831652471287947`*^9}, {3.4831653476880765`*^9, 
+   3.4831654066705637`*^9}, {3.4833080512558823`*^9, 3.483308073036993*^9}, {
+   3.483308104568041*^9, 3.4833081203648148`*^9}, 3.4833101999296308`*^9, {
+   3.483320702569908*^9, 3.4833207205229177`*^9}, {3.483380955837079*^9, 
+   3.4833809587276487`*^9}}]
+}, Open  ]]
+},
+Evaluator->"Client2B",
+WindowSize->{629, 684},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Client_Load_Vector_Actions"->{
+  Cell[19837, 460, 205, 3, 67, "Section",
+   CellTags->"Client_Load_Vector_Actions"],
+  Cell[20045, 465, 5698, 120, 403, "Input",
+   CellTags->"Client_Load_Vector_Actions"]},
+ "Client_Stiffness_Matrix_Actions"->{
+  Cell[7531, 202, 215, 3, 67, "Section",
+   CellTags->"Client_Stiffness_Matrix_Actions"],
+  Cell[7749, 207, 12051, 248, 823, "Input",
+   CellTags->"Client_Stiffness_Matrix_Actions"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Client_Load_Vector_Actions", 28677, 659},
+ {"Client_Stiffness_Matrix_Actions", 28890, 664}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 148, 2, 27, "Input"],
+Cell[CellGroupData[{
+Cell[718, 26, 27, 0, 67, "Section"],
+Cell[748, 28, 888, 19, 91, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1673, 52, 103, 1, 67, "Section"],
+Cell[1779, 55, 730, 17, 73, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2546, 77, 154, 2, 67, "Section"],
+Cell[2703, 81, 4791, 116, 553, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7531, 202, 215, 3, 67, "Section",
+ CellTags->"Client_Stiffness_Matrix_Actions"],
+Cell[7749, 207, 12051, 248, 823, "Input",
+ CellTags->"Client_Stiffness_Matrix_Actions"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19837, 460, 205, 3, 67, "Section",
+ CellTags->"Client_Load_Vector_Actions"],
+Cell[20045, 465, 5698, 120, 403, "Input",
+ CellTags->"Client_Load_Vector_Actions"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25780, 590, 98, 1, 67, "Section"],
+Cell[25881, 593, 2451, 52, 163, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
